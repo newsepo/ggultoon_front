@@ -1,0 +1,440 @@
+@media screen and (min-width: 1295px) {
+    #mainSection {
+        min-height: 100vh;
+    }
+    #layoutSidenav {
+        min-height: 100vh;
+        height: 100%;
+    }
+}
+
+#lib_bottom_container {
+    margin-left: 12px !important;
+}
+
+#toonWrap.hide #mainSection #layoutSidenav #lib_bottom_container {
+    max-width: 768px !important;
+}
+
+/* 내서재 헤더 */
+header#myLib {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 570px;
+    box-sizing: border-box;
+    padding: 12px 0.5rem;
+    background-color: var(--theme-day-bg);
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+
+#toonWrap.hide header#myLib {
+    max-width: 768px;
+}
+
+header#myLib > button {
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    border-style: none;
+    background-color: var(--theme-day-bg);
+    padding: 0px;
+}
+
+header#myLib svg > path {
+    stroke: var(--text-able);
+}
+header#myLib p.myInfo.title {
+    font-family: "NanumSquareNeo";
+    font-weight: 800;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    width: calc(100% - 32px);
+}
+/* !내서재 헤더 Fin */
+
+.lib_container {
+    width: 100%;
+    padding-bottom: 3rem;
+    box-sizing: border-box;
+    padding-top: 64px;
+}
+
+.lib_top {
+    width: 100%;
+    padding: 0px 1rem;
+    margin-bottom: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.lib_top label[for="lib_search"] {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    width: 100%;
+    border: 1px solid var(--border-e0);
+    background-color: var(--theme-day-bg);
+    border-radius: 0.5rem;
+    padding: 11px 10px;
+}
+
+.lib_top label[for="lib_search"] > input {
+    border-style: none;
+    outline: none;
+    color: var(--text-able);
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    width: 100%;
+}
+
+.lib_top label[for="lib_search"] > input::placeholder {
+    color: var(--text-primary);
+}
+/* !내서재 검색창 Fin */
+
+.lib_content {
+    width: 100%;
+}
+
+.lib_container .lib_content .lib_tab_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 1rem;
+    margin-bottom: 1rem;
+}
+
+.lib_container.edit .lib_content .lib_tab_top {
+    margin-bottom: 0.5rem;
+}
+.lib_content .lib_tab_top .tab_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+}
+
+.lib_content .lib_tab_top .tab_wrap .tab_item {
+    font-family: "NanumSquareNeo";
+    font-size: 13px;
+    line-height: 140%;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: var(--text-333);
+    padding: 6px 14px;
+    padding-right: 7px;
+    background-color: var(--theme-day-bg);
+}
+
+.lib_content .lib_tab_top .tab_wrap .tab_item.active {
+    padding: 6px 14px;
+    border: 1px solid var(--text-able);
+    border-radius: 999px;
+    color: var(--text-able);
+    font-weight: 800;
+}
+
+.lib_container.edit .lib_content .lib_tab_top #edit,
+.lib_container .lib_content .lib_tab_top #complete {
+    display: none;
+    width: fit-content;
+    color: var(--text-primary);
+    text-align: right;
+    background-color: transparent;
+}
+
+.lib_container .lib_content .lib_tab_top #edit {
+    display: block;
+    width: fit-content;
+    color: var(--text-primary);
+    text-align: right;
+    background-color: transparent;
+}
+
+.lib_container.edit .lib_content .lib_tab_top #complete {
+    display: block;
+}
+
+/* !편집모드시 보이는 상단 제어박스 */
+.lib_content .edit_top {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.lib_container.edit .lib_content .edit_top {
+    display: flex;
+}
+
+.lib_content .edit_top > input {
+    display: none;
+}
+
+.lib_content .edit_top label[for="select_all"] {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    gap: 0.25rem;
+}
+
+.lib_content .edit_top label[for="select_all"] > svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.lib_content .edit_top label[for="select_all"] > svg > path {
+    stroke: var(--border-e0);
+}
+
+.lib_content .edit_top > input:checked ~ label[for="select_all"] > svg > path {
+    stroke: #ffb904;
+}
+
+/* 삭제버튼 */
+.lib_content .edit_top > #delete {
+    display: block;
+    text-align: right;
+    color: var(--warning);
+    background-color: transparent;
+}
+
+/* !내서재 리스트 아이템 */
+.tab_content {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 1rem;
+}
+
+.tab_content.active {
+    display: flex;
+}
+
+.tab_content .item {
+    display: block;
+    width: 100%;
+}
+
+.tab_content .item > figure {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    height: 115px;
+}
+
+.tab_content .item .img_wrap {
+    width: 80px;
+    height: 115px;
+    box-sizing: border-box;
+    border-radius: 3px 10px 10px 3px;
+    overflow: hidden;
+}
+
+.tab_content .item .img_wrap > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tab_content .item figure figcaption {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    width: calc(100% - 92px);
+    height: 100%;
+    padding: 8.5px 0px;
+}
+.tab_content .item figure figcaption .info_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: calc(100% - 74px);
+    letter-spacing: -0.5px;
+}
+
+.tab_content .item figure figcaption .info_wrap > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+}
+.tab_content .item figure figcaption .info_wrap > div > img {
+    display: inline-block;
+    width: fit-content;
+}
+
+.lib_container.edit .tab_content .item figure figcaption .info_wrap {
+    width: calc(100% - 24px);
+}
+
+/* 장르 */
+.tab_content .item figure figcaption .info_wrap .genre {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+.tab_content .item figure figcaption .info_wrap .title {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+
+    color: var(--text-333);
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    margin-right: 0.5rem;
+}
+
+.tab_content .item figure figcaption .info_wrap .date {
+    color: var(--text-primary);
+}
+
+.tab_content .item figure figcaption .info_wrap .bottom_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.tab_content .item figure figcaption .info_wrap .bottom_wrap > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.tab_content .item figure figcaption .info_wrap .bottom_wrap > div .episode_count {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+}
+
+.tab_content .item figure figcaption .info_wrap .bottom_wrap > div .episode_count > b {
+    color: var(--text-333);
+    font-weight: 500;
+}
+.tab_content .item figure figcaption .info_wrap .bottom_wrap > div .episode_count > b:last-of-type {
+    color: var(--text-primary);
+}
+.tab_content .item figure figcaption .info_wrap .bottom_wrap > div .episode_count > b:last-of-type::before {
+    content: "/";
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--text-primary);
+}
+
+.tab_content .item figure figcaption .btn_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+}
+
+.lib_container.edit .tab_content .item figure figcaption .btn_wrap {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.lib_container .tab_content .item figure figcaption .btn_wrap .continue {
+    display: block;
+    box-sizing: border-box;
+    padding: 6px 1rem;
+    border: 1px solid var(--border-e0);
+    border-radius: 6px;
+    background-color: var(--theme-day-bg);
+    color: var(--text-able);
+    width: 74px;
+    letter-spacing: -0.5px;
+}
+
+.lib_container.edit .tab_content .item figure figcaption .btn_wrap .continue {
+    display: none;
+    width: 0px;
+}
+
+.lib_container .tab_content .item figure figcaption .btn_wrap svg {
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
+.tab_content .item figure figcaption .btn_wrap svg > path {
+    stroke: var(--border-e0);
+}
+
+.tab_content .item figure figcaption .btn_wrap .continue.active {
+    display: block;
+}
+
+.lib_container.edit .tab_content .item figure figcaption .btn_wrap svg {
+    display: block;
+}
+
+.lib_container.edit .tab_content .item figure figcaption .btn_wrap svg.active > path {
+    stroke: #ffb904;
+}
+
+/* 보고있는 작품이 없을경우  */
+#search_container {
+    width: 100%;
+}
+#search_container .no_result {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+#search_container .no_result.active {
+    display: flex;
+}
+
+#search_container .no_result > svg {
+    display: block;
+    width: 38px;
+    height: 38px;
+}
+#search_container .no_result > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-secondary);
+    text-align: center;
+}
+#search_container .no_result > p > span {
+    display: inline-block;
+    width: fit-content;
+}

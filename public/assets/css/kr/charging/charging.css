@@ -1,0 +1,506 @@
+#charging {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    background-color: var(--theme-day-bg);
+    box-sizing: border-box;
+    padding: 12px 0.5rem;
+    margin-top: -69px;
+}
+
+#charging > p {
+    width: calc(100% - 32px);
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: var(--text-able);
+    margin-bottom: 0px;
+}
+
+.charging_container {
+    box-sizing: border-box;
+    padding-top: calc(56px + 0.5rem);
+    padding-bottom: 5rem;
+}
+
+.charging_container .banner_wrap {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.charging_container .banner_wrap #chargingBannerSwiper,
+.charging_container .banner_wrap #chargingBannerSwiper .swiper-wrapper {
+    width: 100%;
+}
+
+.charging_container .banner_wrap #chargingBannerSwiper .swiper-wrapper .swiper-slide {
+    width: fit-content;
+}
+
+.charging_container .banner_wrap #chargingBannerSwiper .swiper-notification {
+    display: none;
+}
+
+.banner_wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* max-height: 175px; */
+    object-fit: contain;
+}
+
+.charging_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+}
+
+.charging_content > div {
+    width: 100%;
+}
+
+.charging_content h4 {
+    display: block;
+    width: 100%;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+    padding: 0px 1rem;
+}
+.charging_content h4#charging_title {
+    margin-bottom: 0.5rem;
+}
+
+.charging_content ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.charging_content ul > li {
+    display: block;
+    width: 100%;
+    background-color: var(--theme-day-bg);
+    box-sizing: border-box;
+    border: 1px solid var(--border-f0);
+    border-radius: 0.5rem;
+}
+
+.charging_content ul > li.active {
+    border: 1px solid var(--text-able);
+}
+
+.top_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem 12px;
+    background-color: var(--theme-day-bg);
+    border-radius: 0.5rem 0.5rem 0px 0px;
+}
+
+.top_wrap > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 0.25rem;
+}
+
+.top_wrap > div > span,
+.top_wrap > p {
+    display: inline-block;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    text-align: left;
+    font-weight: 800;
+    color: var(--text-333);
+    margin-bottom: 0px;
+}
+
+.top_wrap > div > span::after,
+.top_wrap > p::after {
+    content: "꿀";
+    display: inline-block;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 12px;
+    letter-spacing: -0.5px;
+    color: var(--text-333);
+    margin-bottom: 0px;
+}
+
+.top_wrap > div > span::after {
+    font-size: 12px;
+}
+
+.top_wrap > p::after {
+    content: "원";
+}
+
+.charging_content ul > li .bottom_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--charging-bg);
+    padding: 10px 12px;
+    border-radius: 0px 0px 0.5rem 0.5rem;
+}
+
+.bottom_wrap > p {
+    display: inline-block;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    text-align: left;
+    font-weight: 800;
+    color: var(--success);
+    margin-bottom: 0px;
+}
+
+.bottom_wrap > p::after {
+    content: "마일리지";
+    display: inline-block;
+    font-family: "NanumSquareNeo";
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.5px;
+    color: var(--success);
+}
+
+.bottom_wrap .bonus_coin::before {
+    content: "+";
+    display: inline-block;
+    vertical-align: baseline;
+    font-family: "NanumSquareNeo";
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.5px;
+    color: var(--success);
+    margin-right: 0.25rem;
+}
+
+.bottom_wrap .bonus_coin::after {
+    content: "보너스코인";
+}
+
+hr.line {
+    display: block;
+    width: 100%;
+    border-top: 5px solid var(--footer-bg);
+    opacity: 1;
+    margin: 0 auto;
+}
+
+.charging_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    padding: 1rem 20px;
+    border-radius: 0.5rem;
+    background-color: var(--footer-bg);
+    margin-top: 0.5rem;
+}
+
+.charging_info p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.charging_info p > span {
+    display: block;
+    width: fit-content;
+}
+
+.charging_info p:nth-of-type(2) > span:last-of-type {
+    color: var(--success);
+}
+.charging_info p:first-of-type > span:last-of-type::after {
+    content: "꿀";
+    display: inline-block;
+    vertical-align: baseline;
+}
+.charging_info p:nth-of-type(2) > span:last-of-type::before {
+    content: "+";
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.charging_info p:nth-of-type(2) > span:last-of-type::after {
+    content: "마일리지";
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.charging_info p:last-of-type > span:last-of-type::after {
+    content: "원";
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.grade_section {
+    width: 100%;
+}
+
+.grade_section .grade_notice {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #f1f6fe;
+    color: var(--text-333);
+    margin: 0 auto;
+}
+
+.grade_section .grade_notice > span {
+    color: var(--success);
+}
+
+.simple_pay > div,
+.normal_pay > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.simple_pay > div > button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 54px;
+    background-color: var(--theme-day-bg);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-e0);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+.simple_pay > div > button img {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.normal_pay > div button {
+    width: 100%;
+    height: 54px;
+    box-sizing: border-box;
+    background-color: var(--theme-day-bg);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-e0);
+    text-align: center;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+.simple_pay > div > button:hover,
+.normal_pay > div button:hover {
+    background-color: var(--border-f0);
+}
+
+.notice {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 1rem;
+}
+
+.notice p {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.notice p:first-of-type {
+    margin-bottom: 6px;
+}
+
+.notice p:last-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.notice p:last-of-type > span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.notice p:last-of-type > span b {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.notice p:last-of-type > span > b:first-of-type {
+    display: inline-block;
+    width: 10px;
+    text-align: center;
+}
+
+.notice p:last-of-type > span > b:last-of-type {
+    width: calc(100% - 10px);
+}
+
+/* 등급 */
+
+.level {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1px;
+    /*border-bottom: 5px solid var(--footer-bg);*/
+}
+
+.level figure {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    padding: 0px 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.level figure > img {
+    display: block;
+    width: 54px;
+    height: 54px;
+    border-radius: 999px;
+    box-sizing: border-box;
+}
+
+.level figure > figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+    width: calc(100% - 66px);
+}
+
+.level figure > figcaption h5 {
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+.level figure > figcaption p {
+    margin-bottom: 0px;
+}
+.level figure > figcaption p > span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    font-weight: 500;
+}
+
+.level figure > figcaption p > span > b {
+    font-weight: 500;
+    color: var(--success);
+}
+/* 그래프 */
+.level > div {
+    box-sizing: border-box;
+    padding: 0px 1rem;
+    width: 100%;
+}
+
+.level > div .level_graph {
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background-color: var(--border-f0);
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.level > div .level_graph > .fill {
+    display: block;
+    width: 0%;
+    height: 8px;
+    background: linear-gradient(
+        to right,
+        rgba(255, 62, 62, 1) 0%,
+        rgba(241, 156, 27, 1) 20%,
+        rgba(255, 227, 81, 1) 40%,
+        rgba(122, 231, 37, 1) 60%,
+        rgba(62, 232, 255, 1) 80%,
+        rgba(92, 216, 255, 1) 100%
+    );
+    border-radius: 999px;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+.level > div label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.level > div label > span {
+    font-family: "NanumSquareNeo";
+    font-weight: 700;
+    line-height: 15.4px;
+    font-size: 11px;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+}
+
+.level > div label > span.active {
+    color: var(--text-333);
+    font-weight: 800;
+}
+
+/* !등급 Fin */

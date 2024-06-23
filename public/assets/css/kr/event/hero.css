@@ -1,0 +1,363 @@
+button {
+    border-style: none;
+    padding: 0px;
+    background-color: transparent;
+}
+p,
+figure {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+header#hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 570px;
+    gap: 0.25rem;
+    box-sizing: border-box;
+    background-color: var(--theme-day-bg);
+    padding: 12px 0.5rem;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+
+#toonWrap.hide #mainSection header#hero {
+    max-width: 768px;
+}
+header#hero button {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+header#hero svg {
+    stroke: var(--text-able);
+}
+header#hero > p {
+    width: calc(100% - 36px - 1rem);
+    text-align: center;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    line-height: 120%;
+    font-weight: 800;
+    color: var(--text-able);
+}
+/* !header Fin */
+
+#hero_container {
+    width: 100%;
+    padding-top: 56px;
+}
+
+#hero_container .hero_wrap {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 1rem;
+    background: url("/assets/images/kr/event/hero/intro_20231214.jpg") no-repeat top center #2b4186;
+    background-size: 100%;
+}
+
+#hero_container .hero_wrap {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 86%;
+}
+
+#hero_container .hero_wrap .tab_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#hero_container .hero_wrap .tab_wrap .tab_item {
+    width: 100%;
+    height: 70px;
+    background-size: 100%;
+    border-radius: 8% 8% 0px 0px;
+    cursor: pointer;
+    /* transition-duration: 0.15s; */
+    /* transition-timing-function: ease-in-out; */
+}
+
+#hero_container .hero_wrap .tab_wrap .tab_item#hwangseong {
+    background: url("/assets/images/kr/event/hero/tab_01_off.png") no-repeat center top;
+}
+#hero_container .hero_wrap .tab_wrap .tab_item#yasulloc {
+    background: url("/assets/images/kr/event/hero/tab_02_off.png") no-repeat center top;
+}
+#hero_container .hero_wrap .tab_wrap .tab_item#samadal {
+    background: url("/assets/images/kr/event/hero/tab_03_off.png") no-repeat center top;
+}
+#hero_container .hero_wrap .tab_wrap .tab_item#haseungnam {
+    background: url("/assets/images/kr/event/hero/tab_04_off.png") no-repeat center top;
+}
+#hero_container .hero_wrap .tab_wrap .tab_item#muggeomhyang {
+    background: url("/assets/images/kr/event/hero/tab_05_off.png") no-repeat center top;
+}
+
+#hero_container .hero_wrap .tab_wrap .tab_item#hwangseong.active {
+    background: url("/assets/images/kr/event/hero/tab_01_on.png") no-repeat center top;
+}
+#hero_container .hero_wrap .tab_wrap .tab_item#yasulloc.active {
+    background: url("/assets/images/kr/event/hero/tab_02_on.png") no-repeat center top;
+}
+#hero_container .hero_wrap .tab_wrap .tab_item#samadal.active {
+    background: url("/assets/images/kr/event/hero/tab_03_on.png") no-repeat center top;
+}
+#hero_container .hero_wrap .tab_wrap .tab_item#haseungnam.active {
+    background: url("/assets/images/kr/event/hero/tab_04_on.png") no-repeat center top;
+}
+#hero_container .hero_wrap .tab_wrap .tab_item#muggeomhyang.active {
+    background: url("/assets/images/kr/event/hero/tab_05_on.png") no-repeat center top;
+}
+
+#hero_container .hero_wrap .tab_container {
+    width: 100%;
+    margin-top: -10px;
+    background-color: var(--theme-day-bg);
+}
+
+#hero_container .hero_wrap .tab_container .tab_content {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 6px;
+    grid-row-gap: 1rem;
+    box-sizing: border-box;
+    padding: 20px 1rem;
+}
+
+#hero_container .hero_wrap .tab_container .tab_content.active {
+    display: grid;
+}
+#toonWrap.hide #mainSection #hero_container .hero_wrap .tab_container .tab_content {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 430px) {
+    #hero_container .hero_wrap .tab_container .tab_content{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 330px) {
+    #hero_container .hero_wrap .tab_container .tab_content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.tab_content a {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.tab_content a figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.tab_content a figure .img_wrap {
+    display: block;
+    width: 100%;
+    height: calc(17rem * 1/1.5);
+    overflow: hidden !important;
+}
+
+#toonWrap.hide #mainSection #layoutSidenav .tab_content a figure .img_wrap{
+    height: calc(11rem * 1/0.96);
+}
+
+.tab_content a figure .img_wrap > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    object-fit: cover;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+.tab_content a:hover figure .img_wrap > img {
+    transform: scale(1.1);
+}
+
+.tab_content a figure > figcaption {
+    width: 100%;
+}
+.tab_content a figure > figcaption p {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    word-wrap: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 100%;
+    font-family: "NanumSquareNeo";
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+    color: var(--text-able);
+}
+
+
+
+
+
+
+
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2837.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2863.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/5967.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/5902.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2827.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2802.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/5919.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2630.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/5946.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2507.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/3950.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2855.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/5989.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2687.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/5920.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2756.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2689.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/5907.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2838.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2411.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/4205.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2530.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/5969.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2494.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2638.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2553.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2656.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/5985.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2412.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/hwangseong/2405.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6286.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6712.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6084.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6097.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6145.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6581.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6161.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6164.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6221.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6224.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6245.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6244.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6274.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6281.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6359.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6363.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6368.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6398.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6411.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6427.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6430.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6447.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6469.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6472.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6476.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6478.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6488.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6506.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6528.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/yasulloc/6560.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/170.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/171.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/172.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/173.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/175.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/178.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/179.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/180.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/182.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/183.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/185.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/186.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/187.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/188.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/189.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/190.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/191.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/192.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/193.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/194.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/195.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/196.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/198.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/200.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/201.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/202.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/203.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/204.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/205.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/muggeomhyang/206.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/2423.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/2420.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/2419.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/2422.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3531.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3615.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/6041.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/6019.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/6040.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/6021.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/6029.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3507.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3576.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3567.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/6016.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/6020.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3416.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3588.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3582.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3372.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3502.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3383.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3584.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3382.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3354.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3445.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3521.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3494.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/6046.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/haseungnam/3528.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3170.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3174.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3207.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3982.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3193.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3196.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/6007.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3173.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3211.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3203.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3204.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3212.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3304.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/6067.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3639.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/2967.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/2953.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/2966.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3015.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/2959.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/6057.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3073.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3158.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/2998.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/6062.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3096.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3008.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3004.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3002.jpg" */
+/* src="/assets/images/kr/event/hero/thumbnail/samadal/3003.jpg" */

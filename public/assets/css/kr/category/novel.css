@@ -1,0 +1,533 @@
+body {
+    height: 100% !important;
+}
+
+button,
+select {
+    display: block;
+    border-style: none;
+    background-color: var(--theme-day-bg);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+figure {
+    margin-bottom: 0px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("/assets/images/kr/icon/down.png") no-repeat right 0px center;
+    min-width: 100px;
+    position: relative;
+    color: var(--disable);
+    box-sizing: border-box;
+    padding-right: 20px;
+    border-style: none;
+    outline: none;
+}
+
+select > option {
+    text-align: right;
+    margin-right: 20px;
+    color: var(--text-able);
+    background-color: var(--theme-day-bg);
+}
+
+select.active {
+    display: block;
+}
+
+button.rank_filter {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    width: fit-content;
+    background-color: transparent;
+}
+
+button.rank_filter.active {
+    display: flex;
+}
+
+button.rank_filter > span {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+button.rank_filter > svg {
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+button.rank_filter > svg.active {
+    transform: rotate(180deg);
+}
+
+.swiper {
+    margin: 0;
+    padding: 0;
+}
+
+.sticky {
+    background-color: lightgray;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    background-color: var(--theme-day-bg);
+    /* margin-top: -56px; */
+}
+
+.swiper img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+.swiper.menuSwiper {
+    width: 100%;
+    height: 38px;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+    padding-left: 1rem;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.swiper.menuSwiper .swiper-slide {
+    width: auto;
+    cursor: pointer;
+}
+.swiper.menuSwiper button.btn {
+    box-sizing: border-box;
+    background-color: var(--theme-day-bg);
+    border: 1px solid var(--theme-day-bg);
+    font-weight: 700;
+    color: var(--text-333);
+    text-align: center;
+    letter-spacing: -0.5px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-family: "NanumSquareNeo";
+    font-size: 13px;
+    line-height: 18.2px;
+    opacity: 1;
+}
+
+.swiper.menuSwiper .swiper-slide-thumb-active button.btn {
+    border-color: var(--text-able);
+    font-weight: 800;
+}
+
+#bannerSwiperContainer {
+    width: 100%;
+    padding: 1rem 0px;
+    padding-bottom: 0px;
+}
+
+.swiper.bannerSwiper {
+    width: 100%;
+    overflow: hidden;
+    min-width: 200px;
+}
+
+.swiper.bannerSwiper .swiper-wrapper {
+    width: 100%;
+}
+
+.swiper.bannerSwiper .swiper-wrapper .swiper-slide {
+    width: 90%;
+}
+
+.filter_wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 0px 1rem;
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.filter_wrap .button_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 136px;
+    box-sizing: border-box;
+}
+
+.filter_wrap .button_wrap button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 4px 6px;
+    border: 1px solid var(--border-e0);
+    background-color: var(--theme-day-bg);
+}
+
+.filter_wrap .button_wrap button.active {
+    gap: 4px;
+    background-color: #fffae0;
+    border-color: var(--primary);
+}
+
+.filter_wrap .button_wrap button > span {
+    display: none;
+    min-width: 30px;
+    font-family: "UhBeeSe_hyun";
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: -0.5px;
+    font-weight: 400;
+    color: var(--text-able);
+}
+
+.filter_wrap .button_wrap button.active > span {
+    display: block;
+}
+
+.filter_wrap .all > svg > path,
+circle {
+    stroke: var(--disable);
+    border-collapse: collapse;
+}
+
+.filter_wrap .all {
+    border-radius: 4px 0px 0px 4px;
+}
+
+.filter_wrap .normal {
+    border-left-width: 0.5px;
+    border-right-width: 0.5px;
+}
+
+.filter_wrap .adult {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.filter_wrap button.active > svg > path {
+    stroke: #222;
+}
+
+.filter_wrap button:first-of-type.active > svg > circle {
+    stroke: #222;
+    fill: var(--primary);
+}
+
+.filter_wrap .normal > svg > path:first-of-type,
+.filter_wrap .adult > svg > path:first-of-type {
+    fill: #fff;
+}
+
+.filter_wrap .normal > svg > path:last-of-type,
+.filter_wrap .adult > svg > path:last-of-type {
+    fill: #999;
+}
+
+.filter_wrap .normal.active > svg > path:first-of-type,
+.filter_wrap .adult.active > svg > path:first-of-type {
+    fill: var(--primary);
+}
+
+.filter_wrap .normal.active > svg > path:last-of-type,
+.filter_wrap .adult.active > svg > path:last-of-type {
+    fill: #222;
+}
+/* 상단 죄측 전체, 일반, 성인 btn */
+
+.filter_wrap .select_wrap {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    width: fit-content;
+    margin: 0px;
+    position: relative;
+}
+
+.filter_wrap .select_wrap.active {
+    display: flex;
+}
+.filter_wrap .select_wrap > button > span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 0.5rem 0px;
+}
+.filter_wrap .select_wrap > button > svg {
+    width: 20px;
+    height: 20px;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+.filter_wrap .select_wrap > button > svg.active {
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
+}
+.filter_wrap .select_wrap .sort_list {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 89px;
+    position: absolute;
+    top: 36px;
+    right: 0px;
+    z-index: 100;
+    background-color: var(--theme-day-bg);
+    box-sizing: border-box;
+    padding: 1rem 0px;
+    border: 1px solid var(--border-e0);
+    border-radius: 0.5rem;
+}
+.filter_wrap .select_wrap .sort_list.active {
+    display: flex;
+}
+
+.filter_wrap .select_wrap .sort_list > button {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+    width: 100%;
+    color: var(--text-secondary);
+    box-sizing: border-box;
+    padding: 0.5rem 0px;
+}
+.filter_wrap .select_wrap .sort_list > button.active,
+.filter_wrap .select_wrap .sort_list > button:active,
+.filter_wrap .select_wrap .sort_list > button:hover {
+    color: var(--secondary);
+}
+/* 카테고리 내 상단 셀렉트 박스 Fin */
+
+#mySwiperContainer {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0px 1rem;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+#mySwiperContainer .swiper-slide > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 24px;
+    grid-template-rows: min-content;
+    padding-bottom: 6rem;
+    min-height: 70vh;
+}
+
+@media screen and (min-width: 200px) and (max-width: 269px) {
+    #mySwiperContainer .swiper-slide > div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 24px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 270px) and (max-width: 359px) {
+    #mySwiperContainer .swiper-slide > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 24px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 471px) and (max-width: 583px) {
+    #mySwiperContainer .swiper-slide > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 24px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 584px) and (max-width: 697px) {
+    #mySwiperContainer .swiper-slide > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 24px;
+    }
+    #toonWrap.hide #mySwiperContainer .swiper-slide > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 24px;
+    }
+}
+
+@media screen and (min-width: 698px) {
+    #mySwiperContainer .swiper-slide > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 24px;
+    }
+    #toonWrap.hide #mySwiperContainer .swiper-slide > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 24px;
+    }
+}
+
+#mySwiperContainer .swiper-slide div > a {
+    display: block;
+    width: 100%;
+}
+
+#mySwiperContainer .swiper-slide figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+}
+#mySwiperContainer .swiper-slide figure .img_wrap {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px 10px 10px 3px;
+    aspect-ratio: 0.666667 / 1 !important;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+}
+#mySwiperContainer .swiper-slide figure .img_wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+#mySwiperContainer .swiper-slide figure:hover .img_wrap img {
+    transform: scale(1.1);
+}
+
+#mySwiperContainer .swiper-slide div > a figure > .img_wrap > .badge_wrap {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+#mySwiperContainer .swiper-slide figure figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    color: var(--text-333);
+}
+
+#mySwiperContainer .swiper-slide figure figcaption > .rank_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 0.75rem;
+    height: 20px;
+    border-radius: 999px;
+    background-color: var(--border-f0);
+    margin-top: 0.5rem;
+}
+#mySwiperContainer .swiper-slide figure figcaption > .rank_info b {
+    font-weight: 500;
+    line-height: 20px;
+}
+
+#mySwiperContainer .swiper-slide figure figcaption > .rank_info b:first-of-type {
+    color: var(--text-333);
+}
+
+#mySwiperContainer .swiper-slide figure figcaption p {
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+#mySwiperContainer .swiper-slide div > a figure figcaption .info_title,
+#mySwiperContainer .swiper-slide div > a figure figcaption .info_title > span {
+    display: -webkit-box;
+    width: 100%;
+    white-space: normal;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#mySwiperContainer .swiper-slide div > a figure figcaption .info_title > img,
+#mySwiperContainer .swiper-slide div > a figure figcaption .info_title > svg {
+    width: fit-content !important;
+}
+
+#mySwiperContainer .swiper-slide div > a figure figcaption .rank_info + .info_title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+}
+
+#mySwiperContainer .swiper-slide figure figcaption .sub_info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    color: #73747a;
+}
+
+#mySwiperContainer .swiper-slide figure figcaption .sub_info > span {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: keep-all;
+    font-weight: 500;
+    max-width: 40px;
+}
+
+#mySwiperContainer .swiper-slide figure figcaption .sub_info b {
+    display: inline-block;
+    width: fit-content;
+    padding: 0px 1px;
+    font-weight: normal;
+    box-sizing: border-box;
+    color: #dee0e5;
+}
+
+/* 컨텐츠 하단 뱃지 영역 */
+#mySwiperContainer .swiper-slide div > a figure figcaption .bottom_img_info {
+    display: flex;
+    gap: 0.25rem;
+}

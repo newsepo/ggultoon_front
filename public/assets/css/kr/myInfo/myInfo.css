@@ -1,0 +1,312 @@
+#layoutSidenav {
+    height: 100%;
+}
+
+hr.line {
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    opacity: 1;
+    box-sizing: border-box;
+    border-top: 5px solid var(--footer-bg);
+}
+
+header#myInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0.5rem;
+    background-color: var(--theme-day-bg);
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+header#myInfo > button {
+    width: 32px;
+    height: 32px;
+    border-style: none;
+    padding: 0px;
+    background-color: var(--theme-day-bg);
+}
+header#myInfo svg > path {
+    stroke: var(--text-able);
+}
+header#myInfo p.myInfo.title {
+    font-family: "NanumSquareNeo";
+    font-weight: 800;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    width: calc(100% - 2rem - 40px);
+}
+
+.myInfo_container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.myInfo_container .myInfo_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.myInfo_container .myInfo_content .top {
+    display: block;
+    width: 100%;
+}
+
+.myInfo_container .myInfo_content .top figure {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    padding: 0px 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.myInfo_container .myInfo_content .top figure > img {
+    display: block;
+    width: 54px;
+    height: 54px;
+    border-radius: 999px;
+    box-sizing: border-box;
+}
+
+.myInfo_container .myInfo_content .top figure > figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
+    width: calc(100% - 66px);
+}
+
+.myInfo_container .myInfo_content .top figure > figcaption h5 {
+    display: block;
+    width: 100%;
+}
+
+.myInfo_container .myInfo_content .top figure > figcaption p > span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    font-weight: 500;
+}
+
+.myInfo_container .myInfo_content .top figure > figcaption p > span > b {
+    font-weight: 500;
+    color: var(--success);
+}
+
+.myInfo_container .myInfo_content .info_wrap .validation_notice > .success {
+    color: var(--success);
+}
+
+/* 그래프 */
+.level > div {
+    box-sizing: border-box;
+    padding: 0px 1rem;
+    width: 100%;
+}
+
+.level > div .level_graph {
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background-color: var(--border-f0);
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.level > div .level_graph > .fill {
+    display: block;
+    width: 0;
+    height: 8px;
+    background: linear-gradient(
+        to right,
+        rgba(255, 62, 62, 1) 0%,
+        rgba(241, 156, 27, 1) 20%,
+        rgba(255, 227, 81, 1) 40%,
+        rgba(122, 231, 37, 1) 60%,
+        rgba(62, 232, 255, 1) 80%,
+        rgba(92, 216, 255, 1) 100%
+    );
+    border-radius: 999px;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+.level > div label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.level > div label > span {
+    font-family: "NanumSquareNeo";
+    font-weight: 700;
+    line-height: 15.4px;
+    font-size: 11px;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+}
+
+.level > div label > span.active {
+    color: var(--text-333);
+    font-weight: 800;
+}
+
+/* !등급 Fin */
+
+/* 계정 정보 */
+.myInfo_container .myInfo_content .info_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0px 1rem;
+}
+
+.myInfo_container .myInfo_content .info_wrap > li {
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--footer-bg);
+}
+
+.myInfo_container .myInfo_content .info_wrap > li h4 {
+    font-family: "NanumSquareNeo";
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    color: var(--text-333);
+    margin-bottom: 12px;
+}
+.myInfo_container .myInfo_content .info_wrap > li figure {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+}
+.myInfo_container .myInfo_content .info_wrap > li figure > img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+.myInfo_container .myInfo_content .info_wrap > li figure > figcaption {
+    width: calc(100% - 30px);
+    overflow: hidden;
+}
+.myInfo_container .myInfo_content .info_wrap > li figure > figcaption p {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: break-word;
+    width: 100%;
+    -webkit-line-clamp: 1;
+}
+
+.myInfo_container .myInfo_content .info_wrap > li input {
+    display: block;
+    width: calc(100% - 28px);
+    box-sizing: border-box;
+    padding: 14px 1rem;
+    border: 1px solid var(--border-e0);
+    background-color: var(--theme-day-bg);
+    color: var(--text-333);
+    border-radius: 0.5rem;
+}
+.myInfo_container .myInfo_content .info_wrap > li > input {
+    width: 100%;
+}
+
+.myInfo_container .myInfo_content .info_wrap > li label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 1rem;
+    border: 1px solid var(--border-e0);
+    background-color: var(--theme-day-bg);
+    color: var(--text-333);
+    border-radius: 0.5rem;
+}
+
+.myInfo_container .myInfo_content .info_wrap > li label:nth-of-type(2) {
+    margin-top: 0.75rem;
+}
+
+.myInfo_container .myInfo_content .info_wrap > li label > input {
+    border-style: none;
+    padding: 0px;
+}
+
+/* 비밀번호 보이기 감추기 */
+.myInfo_container .myInfo_content .info_wrap > li label .pw_visivility > svg {
+    display: none;
+}
+.myInfo_container .myInfo_content .info_wrap > li label .pw_visivility > svg.active {
+    display: block;
+}
+
+.myInfo_container .myInfo_content .info_wrap > li .validation_notice {
+    display: block;
+    width: 100%;
+    text-indent: 0.5rem;
+    margin-top: 6px;
+}
+
+.myInfo_container .myInfo_content .info_wrap > li .validation_notice > span {
+    display: none;
+    width: 100%;
+    font-weight: 500;
+    color: var(--warning);
+}
+
+.myInfo_container .myInfo_content .info_wrap > li .validation_notice > span.active {
+    display: block;
+}
+
+/* 최하단 저장하기 btn */
+button#save_info {
+    display: block;
+    width: calc(100% - 2rem);
+    height: 48px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border-style: none;
+    background-color: var(--primary);
+    color: var(--text-able);
+    opacity: 1;
+    position: sticky;
+    left: 1rem;
+    bottom: 1rem;
+    z-index: 100;
+}
+
+button#save_info:disabled {
+    opacity: 0.4;
+}

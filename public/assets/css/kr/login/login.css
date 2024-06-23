@@ -1,0 +1,487 @@
+#loginFrm input:-webkit-autofill,
+#joinFrm input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+}
+#loginFrm input:-webkit-autofill,
+#loginFrm input:-webkit-autofill:hover,
+#loginFrm input:-webkit-autofill:focus,
+#loginFrm input:-webkit-autofill:active,
+#joinFrm input:-webkit-autofill,
+#joinFrm input:-webkit-autofill:hover,
+#joinFrm input:-webkit-autofill:focus,
+#joinFrm input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#login_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*background-color: rgba(000, 000, 000, 0.4);*/
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+#login_container .login_wrap {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  min-width: 328px;
+  max-width: 436px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-e0);
+  border-top: none;
+  background-color: var(--theme-day-bg);
+  transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  min-height:650px;
+}
+
+#login_container .login_wrap .login_tab {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 54px;
+  /* overflow: hidden; */
+  border-radius: 10px 10px 0px 0px;
+  position: relative;
+}
+
+#login_container .login_wrap .login_tab > .login_tab_item {
+  position: absolute;
+  width: 52%;
+  height: 54px;
+  border-radius: 10px 10px 0px 0px;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  background-color: #f0f0f0;
+  border: 1px solid var(--border-e0);
+  border-bottom: none;
+  cursor: pointer;
+}
+
+#login_container .login_wrap .login_tab > .login_tab_item:first-of-type {
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+#login_container .login_wrap .login_tab > .login_tab_item:last-of-type {
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+#login_container .login_wrap .login_tab > .login_tab_item.active {
+  border: 1px solid var(--border-e0);
+  background-color: var(--theme-day-bg);
+  border-bottom: none;
+  z-index: 10;
+  width: 100%;
+}
+#login_container .login_content {
+  overflow-y: scroll;
+}
+#login_container .login_content .content {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 2rem;
+  background-color: var(--theme-day-bg);
+}
+#login_container .login_content .content::-webkit-scrollbar {
+  width: 0px;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  color: transparent;
+}
+#login_container .login_content .content.active {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.login_content .content > p:not(.find) {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem !important;
+  padding-bottom: 0px;
+}
+
+.login_content .content > p:not(.find) > span,
+.join_content > p > span {
+  display: block;
+  width: 100%;
+  color: var(--text-secondary);
+  box-sizing: border-box;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.login_content .content > p:not(.find) > span::before,
+.login_content .content > p:not(.find) > span::after,
+.join_content > p > span::before,
+.join_content > p > span::after {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  top: 7px;
+  background-color: var(--border-e0);
+}
+
+.login_content .content > p:not(.find) > span::before,
+.join_content > p > span::before {
+  left: 0px;
+}
+
+.login_content .content > p:not(.find) > span::after,
+.join_content > p > span::after {
+  right: 0px;
+}
+
+.login_content .content .social_login_wrap,
+.join_content .social_join_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.login_content .content .social_login_wrap > button,
+.join_content .social_join_wrap > button {
+  width: 54px;
+  height: 54px;
+  border-style: none;
+  border-radius: 999px;
+}
+
+.login_content .content .social_login_wrap > button.kakao,
+.join_content .social_join_wrap > button.kakao {
+  background: url('/assets/images/kr/social/kakao.png') no-repeat center center;
+  background-size: 100%;
+}
+
+.login_content .content .social_login_wrap > button.naver,
+.join_content .social_join_wrap > button.naver {
+  background: url('/assets/images/kr/social/naver_btn.png') no-repeat center center;
+  background-size: 100%;
+}
+
+.login_content .content .social_login_wrap > button.google,
+.join_content .social_join_wrap > button.google {
+  background: url('/assets/images/kr/social/google.png') no-repeat center center;
+  background-size: 100%;
+}
+
+.login_content .content > form,
+.join_content > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.join_content > form > div {
+  width: 100%;
+  text-align: left;
+  color: #95979b;
+  text-indent: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.join_content > form > div > span {
+  margin-top: 6px;
+}
+
+input#login_id,
+input#join_id {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13.5px 1rem;
+  border: 1px solid var(--border-e0);
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+input#login_id::placeholder,
+input#login_pw::placeholder,
+input#join_id::placeholder,
+input#join_pw::placeholder {
+  color: var(--text-primary);
+}
+
+label[for='login_pw'],
+label[for='join_pw'] {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13.5px 1rem;
+  border: 1px solid var(--border-e0);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+label[for='join_pw'] {
+  margin-bottom: 0px;
+}
+
+label[for='login_pw'] > svg,
+label[for='join_pw'] > svg {
+  display: none;
+}
+
+label[for='login_pw'] > svg.active,
+label[for='join_pw'] > svg.active {
+  display: block;
+}
+
+label[for='login_pw'] input#login_pw,
+label[for='join_pw'] input#join_pw {
+  display: block;
+  width: calc(100% - 28px);
+  outline: none;
+  border-style: none;
+}
+
+label[for='join_pw'] input#join_pw {
+  width: 100%;
+}
+
+/* 자동로그인 및 아이디 저장 */
+.auto_save_wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.auto_save_wrap input {
+  display: none;
+}
+
+.auto_save_wrap label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.auto_save_wrap label > svg rect,
+.content.join form label > svg rect {
+  stroke: var(--border-e0);
+}
+
+.auto_save_wrap label > svg path,
+.content.join form label > svg path {
+  fill: var(--border-e0);
+}
+
+.auto_save_wrap input[type='checkbox']#auto_login:checked ~ label[for='auto_login'] svg > rect,
+.auto_save_wrap input[type='checkbox']#save_id:checked ~ label[for='save_id'] svg > rect,
+.content.join input[type='checkbox']#all:checked + div label[for='all'] svg > rect,
+.content.join .terms_container input[type='checkbox']#privacy:checked ~ label[for='privacy'] > svg > rect,
+.content.join input[type='checkbox']#age:checked ~ label[for='age'] svg > rect,
+.content.join input[type='checkbox']#marketing:checked ~ label[for='marketing'] svg > rect {
+  stroke: var(--primary);
+  fill: var(--primary);
+}
+
+.auto_save_wrap input[type='checkbox']#auto_login:checked ~ label[for='auto_login'] svg > path,
+.auto_save_wrap input[type='checkbox']#save_id:checked ~ label[for='save_id'] svg > path,
+.content.join input[type='checkbox']#all:checked + div label[for='all'] svg > path,
+.content.join input[type='checkbox']#privacy:checked ~ label[for='privacy'] > svg > path,
+.content.join input[type='checkbox']#age:checked ~ label[for='age'] svg > path,
+.content.join input[type='checkbox']#marketing:checked ~ label[for='marketing'] svg > path {
+  fill: var(--theme-day-bg);
+}
+
+.auto_save_wrap label > span {
+  color: var(--text-primary);
+}
+
+.auto_save_wrap input[type='checkbox']:checked + label > span {
+  color: var(--text-333);
+}
+
+#login,
+#verification_btn,
+#join {
+  display: block;
+  width: 100%;
+  height: 54px;
+  box-sizing: border-box;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 14.5px 1rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  background-color: var(--primary);
+  color: var(--text-able);
+  margin-bottom: 2rem;
+}
+#verification_btn {
+  margin: 1rem 0px;
+}
+
+#join {
+  margin-bottom: 0rem;
+}
+
+#login:disabled,
+#verification_btn:disabled {
+  background-color: var(--border-f0);
+}
+
+#join:disabled {
+  opacity: 40%;
+}
+
+.login_content .content p.find {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.login_content .content p.find > a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.login_content .content p.find > span {
+  display: block;
+  width: fit-content;
+  color: var(--border-e0);
+}
+
+/* 회원가입 내 약관동의 */
+.content.join {
+  width: 100%;
+}
+
+/* 회원가입 내 소셜 회원가입 및 인풋창 추가 */
+.content.join .join_content {
+  width: 100%;
+  text-align: center;
+}
+
+.content.join .join_content > p {
+  margin-bottom: 1rem !important;
+}
+
+.content.join form.terms_agree {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/*약관 폴딩 추가  */
+.content.join form.terms_agree > input {
+  display: none;
+}
+.content.join form.terms_agree div.all_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.content.join form.terms_agree div label[for='all'] {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.content.join form.terms_agree div label[for='all'] span {
+  color: var(--text-333);
+  font-weight: 500;
+}
+
+.content.join form.terms_agree .all_wrap svg.active {
+  transform: rotate(180deg);
+}
+
+.content.join form.terms_agree .terms_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.content.join form.terms_agree .terms_container.active {
+  height: fit-content;
+}
+
+.content.join form.terms_agree .terms_container > input {
+  display: none;
+}
+
+.content.join form.terms_agree .terms_container > label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.content.join form.terms_agree .terms_container > label p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 0px;
+  letter-spacing: -0.5px;
+}
+
+.content.join form.terms_agree .terms_container > label p a {
+  display: block;
+  width: fit-content;
+  color: var(--text-able);
+  letter-spacing: -0.5px;
+}
+
+.content.join form.terms_agree .terms_container > label p b {
+  display: block;
+  width: fit-content;
+  font-weight: 500;
+  color: var(--success);
+  letter-spacing: -0.5px;
+}

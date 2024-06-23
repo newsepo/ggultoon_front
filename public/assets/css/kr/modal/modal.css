@@ -1,0 +1,404 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+p,
+h4,
+h5,
+ul {
+  margin-bottom: 0px;
+  padding: 0px;
+  padding-bottom: 0px;
+}
+
+figure {
+  margin-bottom: 0px;
+}
+button {
+  border-style: none;
+  padding: 0px;
+}
+em {
+  font-style: normal;
+  font-weight: 500;
+}
+b,
+span {
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: auto;
+  width: 570px;
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /*z-index: 1001;*/
+}
+
+
+.modal del {
+  color: var(--text-primary);
+}
+
+#modalPurchaseTotal .modal-detail > span:first-of-type {
+  color: #fc324b;
+}
+
+#toonWrap.hide .modal {
+  width: 768px;
+}
+.dimmed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+.modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 90%;
+  max-height: 80%;
+  padding: 1.25rem;
+  background: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1001;
+  border-radius: 0.625rem;
+  -webkit-border-radius: 0.625rem;
+  -moz-border-radius: 0.625rem;
+  -ms-border-radius: 0.625rem;
+  -o-border-radius: 0.625rem;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.modal .modal-content.modal-xs {
+  width: 16.25rem;
+}
+.modal .modal-content.modal-sm {
+  width: 26.25rem;
+}
+.modal .modal-content .modal-body {
+  padding: 0 0 1rem 0;
+  word-break: keep-all;
+}
+.modal .modal-content .modal-body .modal-title {
+  text-align: center;
+}
+.modal .modal-content .modal-body .modal-detail {
+  text-align: center;
+}
+.modal .modal-content .button-wrap {
+  display: flex;
+  gap: 0.5rem;
+}
+.modal .modal-content .button-wrap.column {
+  flex-direction: column;
+}
+.modal .modal-content .button-wrap > * {
+  padding: 0.7rem 0;
+  flex: 1;
+  font-family: 'Pretendard';
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+/* toast */
+.toast-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 300px;
+  max-width: 100%;
+  border: 0;
+  padding: 0.5rem 1rem;
+  background: none;
+  box-shadow: none;
+  z-index: 999999;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+}
+.toast-wrap .toast-box {
+  margin: 0.5rem auto;
+  padding: 0.9rem 1rem;
+  background: var(--secondary);
+  color: #fff;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
+.toast-wrap.active {
+  display: block;
+}
+.toast-wrap.active .toast-box {
+  animation: toast 0.1s linear;
+  -webkit-animation: toast 0.1s linear;
+}
+@keyframes toast {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+/* content style */
+.modal .modal-content .modal-body p + p {
+  margin-top: 0.5rem;
+}
+.modal .text-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal .inline-box > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 무료회차 구매 포함 여부 */
+#modalPurchaseTotal label {
+  display: none;
+}
+#modalPurchaseTotal label.active {
+  display: block;
+}
+
+/* input[type="checkbox"] style */
+label input[type='checkbox'] {
+  display: none;
+}
+label[class*='check-'] {
+  margin-top: 0.5rem;
+}
+label[class*='check-'] input + span {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+label[class*='check-'] input + span::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  background: url(/assets/images/kr/icon/ico_check_off.png) no-repeat center / 100%;
+}
+label[class*='check-'] input:checked + span {
+  color: var(--text-333);
+}
+label[class*='check-'] input:checked + span::before {
+  background: url(/assets/images/kr/icon/ico_check_on.png) no-repeat center / 100%;
+}
+/* modal button */
+.modal .btn-yellow {
+  background: var(--primary);
+}
+.modal .btn-gray {
+  background: var(--border-f0);
+}
+.modal .btn-red {
+  color: var(--text-white);
+  background: var(--warning);
+}
+
+/* text style */
+.text-red {
+  color: var(--warning);
+}
+.text-gray {
+  color: var(--text-secondary);
+}
+.text-lightgray {
+  color: var(--text-primary);
+}
+.text-blue {
+  color: var(--success);
+}
+.text-yellow {
+  color: var(--secondary);
+}
+
+
+.p-1{
+  padding: 1rem 0rem;
+}
+.p-2{
+  padding: 2rem 0rem;
+}
+
+
+
+/**
+ 이용약관, 개인정보 수집, 마케팅 모달
+ */
+.modal#terms {
+  z-index: 1100;
+}
+.modal#terms .modal-content {
+  height: 500px;
+  max-height: 70%;
+}
+
+/* 카드 포인트 모달 */
+#point_container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#point_container > * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#point_container button:not(.check) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7%;
+  max-width: 80px;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  background-color: transparent;
+}
+
+#point_container button:not(.check) > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+#point_container button.check {
+  position: absolute;
+  bottom: 10%;
+  width: 90%;
+  padding-top: 19%;
+  left: 5%;
+  background-color: transparent;
+  color: transparent;
+  border-radius: 1rem;
+}
+
+#point_container .bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 0.25rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+#point_container .bottom > input {
+  display: none;
+}
+
+#point_container .bottom > label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#point_container .bottom > label > svg,
+#point_container .bottom > label > p {
+  cursor: pointer;
+}
+
+#point_container .bottom > label > svg > rect {
+  stroke: #e0e0e0;
+}
+
+#point_container .bottom > label > svg > path {
+  fill: #e0e0e0;
+}
+
+#point_container .bottom > label > p {
+  color: #999;
+}
+
+#point_container .bottom > input#notToday:checked ~ label > svg > rect {
+  stroke: var(--secondary);
+}
+
+#point_container .bottom > input#notToday:checked ~ label > svg > path {
+  fill: var(--secondary);
+}
+
+#point_container .bottom > input#notToday:checked ~ label > p {
+  color: #222;
+}
+
+/* 선물함 CSS 추가 */
+#modalGift {
+  text-align:center;
+}
+#modalGift .img-box img {
+  max-height: 10rem;
+  margin: 1rem auto 0.4rem;
+}
+#modalGift .go-view {
+  margin-top: 1rem;
+  padding: 0.8rem 0;
+  border-radius: 0.5rem;
+}
+
+/* 긴급 공지 CSS 추가 */
+#noticeModal {
+  text-align:center;
+}
+#noticeModal .img-box img {
+  max-height: 10rem;
+  margin: 1rem auto 0.4rem;
+}
+#noticeModal .go-view {
+  margin-top: 1rem;
+  padding: 0.8rem 0;
+  border-radius: 0.5rem;
+}
+#noticeModal .modal-title {
+  color: #3e7fff;
+}
+
+

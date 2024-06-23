@@ -1,0 +1,163 @@
+@media screen and (min-width: 1295px) {
+    #mainSection {
+        min-height: 100vh;
+    }
+    #layoutSidenav {
+        min-height: 100vh;
+        height: 100%;
+    }
+}
+
+p {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+header#setting {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0.5rem;
+    background-color: var(--theme-day-bg);
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+header#setting > button {
+    width: 32px;
+    height: 32px;
+    border-style: none;
+    padding: 0px;
+    background-color: var(--theme-day-bg);
+}
+header#setting > button svg {
+    stroke: var(--text-able);
+}
+header#setting p.setting.title {
+    font-family: "NanumSquareNeo";
+    font-weight: 800;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    width: calc(100% - 2rem - 40px);
+}
+
+/* 환경설정 리스트 */
+.setting_container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+}
+
+.setting_container .setting_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 1rem;
+}
+
+.setting_container .setting_content > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--footer-bg);
+    padding-bottom: 1rem;
+}
+
+.setting_container .setting_content > li .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100% - 54px);
+    gap: 0.25rem;
+}
+
+.setting_container .setting_content > li .left > h5 {
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: -0.5px;
+    font-weight: 800;
+    color: var(--text-333);
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.setting_container .setting_content > li .left > p {
+    display: block;
+    width: 100%;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+/* 토글 */
+.setting_container .setting_content > li .toggle_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 46px;
+    height: 24px;
+    box-sizing: border-box;
+    padding: 3px;
+    border-radius: 999px;
+    background-color: var(--border-e0);
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+.setting_container .setting_content > li .toggle_wrap > span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: var(--theme-day-bg);
+    border-radius: 999px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 3px;
+    right: auto;
+    transition: 0.5s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+.setting_container .setting_content > li.active .toggle_wrap {
+    background-color: var(--primary);
+    justify-content: flex-end;
+}
+
+.setting_container .setting_content > li.active .toggle_wrap > span {
+    left: 25px;
+    /* right: 3px; */
+}
+
+/* 꿀툰 탈퇴 */
+.setting_container .fixed_bottom {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 29.5px 1rem;
+    background-color: var(--theme-day-bg);
+    text-decoration: none;
+}
+
+.setting_container .fixed_bottom > p {
+    color: var(--text-secondary);
+    text-align: left;
+    width: calc(100% - 40px);
+}

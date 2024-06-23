@@ -1,0 +1,531 @@
+p,
+label,
+figure {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+header#charged {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 570px;
+    box-sizing: border-box;
+    padding: 0.75rem 0.5rem;
+    padding-right: 20px;
+    background-color: var(--theme-day-bg);
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+
+#toonWrap.hide header#charged {
+    max-width: 768px;
+}
+
+header#charged p {
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: -0.5px;
+    text-align: center;
+    font-weight: 800;
+    display: block;
+    width: calc(100% - 32px - 23.2px);
+}
+
+header#charged span {
+    border-style: none;
+    background-color: transparent;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    text-align: right;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.charged_top {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-bottom: 1rem;
+    text-align: center;
+    padding-top: 64px;
+}
+
+.money_info {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--primary);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.money_info .info_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.money_info .info_wrap p {
+    width: 45%;
+    text-align: center;
+    color: var(--text-able);
+    margin-bottom: 0px;
+}
+
+.money_info .info_wrap p > b {
+    display: block;
+    width: 100%;
+    font-family: "NanumSquareNeo";
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    font-weight: 800;
+    margin-top: 0.25rem;
+}
+
+.money_info .info_wrap p > b::after {
+    display: inline-block;
+    width: fit-content;
+    margin-left: 2px;
+    color: var(--text-able);
+    text-transform: uppercase;
+}
+
+.money_info .info_wrap p:first-of-type > b::after {
+    content: "C";
+}
+
+.money_info .info_wrap p:last-of-type > b::after {
+    content: "M";
+}
+
+hr#vertical {
+    display: block;
+    border-top: none;
+    border-right: 1px solid #fff;
+    opacity: 30%;
+    min-height: 45px;
+    margin: 0px;
+}
+
+.money_info > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--text-able);
+    border-radius: 0.5rem;
+}
+
+/* 이용내역 컨텐츠 */
+/* 상단 탭 */
+.charged_content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    padding-bottom: 6rem;
+}
+
+.charged_content .charged_tab {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: sticky;
+    top: 56px;
+    left: 0px;
+    z-index: 1000;
+    background-color: var(--theme-day-bg);
+}
+.charged_content .charged_tab > span {
+    display: block;
+    text-align: center;
+    height: 44px;
+    font-family: "NanumSquareNeo";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    width: 100%;
+    color: var(--text-primary);
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-f0);
+    cursor: pointer;
+}
+
+.charged_content .charged_tab > span.active {
+    font-weight: 800;
+    color: var(--text-able);
+    border-bottom: 2px solid var(--text-able);
+}
+
+.charged_content .content {
+    display: none;
+}
+.charged_content .content.active {
+    display: block;
+}
+
+/* 충전 탭 내 코인 마일리지 탭 */
+.charged_content .content .charge_tab,
+.charged_content .content .use_top,
+.charged_content .content .disappear_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+/* select#charge_sort,
+select#use_sort,
+select#disappear_sort {
+ display: block;
+ border-style: none;
+ background-color: var(--theme-day-bg);
+ color: var(--text-secondary);
+ box-sizing: border-box;
+ padding: 9px 0px;
+} */
+.charged_content .charge.content .charge_tab button,
+.charged_content .content .use_top button {
+    display: block;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    border-style: none;
+    background-color: var(--theme-day-bg);
+    padding: 0px;
+}
+
+/* 상단 셀렉트 박스  */
+.charged_content .charge.content .charge_tab button.select,
+.charged_content .use.content .use_top button.select {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 0.5rem 0px;
+    position: relative;
+    color: var(--text-secondary);
+}
+.charged_content .charge.content .charge_tab button.select > svg,
+.charged_content .use.content .use_top button.select > svg {
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+.charged_content .charge.content .charge_tab button.select.active > svg,
+.charged_content .use.content .use_top button.select.active > svg {
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
+}
+
+/* 셀렉트 박스 옵션 창 */
+.charged_content .charge.content .charge_tab > ul,
+.charged_content .use.content .use_top > ul {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 89px;
+    box-sizing: border-box;
+    padding: 1rem 0px;
+    border: 1px solid var(--border-e0);
+    border-radius: 0.5rem;
+    background-color: var(--theme-day-bg);
+    position: absolute;
+    top: 45px;
+    z-index: 1001;
+}
+.charged_content .charge.content .charge_tab > ul.active,
+.charged_content .use.content .use_top > ul.active {
+    display: flex;
+}
+.charged_content .charge.content .charge_tab > ul > li,
+.charged_content .use.content .use_top > ul > li {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 0px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+.charged_content .charge.content .charge_tab > ul > li:hover,
+.charged_content .charge.content .charge_tab > ul > li.active,
+.charged_content .use.content .use_top > ul > li:hover,
+.charged_content .use.content .use_top > ul > li.active {
+    color: var(--secondary);
+}
+
+/* 편집모드 상단 */
+.edit_top {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+.edit_top.active {
+    display: flex;
+}
+
+.edit_top > input {
+    display: none;
+}
+
+.edit_top label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    box-sizing: border-box;
+    padding: 0.5rem 0px;
+    color: var(--text-primary);
+}
+
+.edit_top label > svg {
+    stroke: var(--border-e0);
+}
+
+.edit_top > input:checked ~ label {
+    color: var(--text-able);
+}
+.edit_top > input:checked ~ label > svg {
+    stroke: #ffb904;
+}
+
+.edit_top > button {
+    display: block;
+    width: fit-content;
+    border-style: none;
+    background-color: transparent;
+    color: var(--warning);
+}
+
+/* 
+.charged_content .charge.content .charge_tab > span {
+ font-family: "NanumSquareNeo";
+ font-weight: 500;
+ line-height: 140%;
+ font-size: 13px;
+ letter-spacing: -0.5px;
+ text-align: center;
+ box-sizing: border-box;
+ padding: 6px 14px;
+ background-color: transparent;
+}
+.charged_content .charge.content .charge_tab > span.active {
+ font-weight: 800;
+ border: 1px solid var(--text-able);
+ background-color: var(--theme-day-bg);
+ border-radius: 999px;
+} */
+
+/* 코인, 마일리지 탭 */
+.charged_content .charge.content .content {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+.charged_content .charge.content .content.active {
+    display: flex;
+}
+
+/* 리스트 내 아이템 */
+.charged_content .content .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 4px;
+    width: 100%;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--footer-bg);
+    margin-bottom: 0.75rem;
+}
+
+.charged_content .content .item > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+/* 편집모드 item */
+.charged_content .content .item.edit {
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.charged_content .content .item.edit > input {
+    display: none;
+}
+.charged_content .content .item.edit > svg,
+.charged_content .content .item.edit > input ~ label > svg {
+    stroke: var(--border-e0);
+}
+.charged_content .content .item.edit > svg.active,
+.charged_content .content .item.edit > input:checked ~ label > svg {
+    stroke: #ffb904;
+}
+
+.charged_content .content .item.edit .wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 4px;
+    width: 100%;
+}
+
+.charged_content .content .item .left span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    text-align: left;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: -0.5px;
+}
+
+.charged_content .content .item .left span > b {
+    font-weight: 500;
+}
+
+.charged_content .content .item .left p.item_title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+}
+.charged_content .content .item .left p.item_title span {
+    color: var(--text-able);
+    font-size: 13px;
+}
+
+.charged_content .use.content .item .left p.item_title span {
+    color: var(--text-secondary);
+}
+
+.charged_content .disappear.content .item .left p.item_title span {
+    color: var(--text-333);
+}
+
+.charged_content .content .item .left p.item_title b {
+    color: var(--text-primary);
+}
+
+.charged_content .charge.content .item .left p.item_title span.amount:last-of-type::after {
+    content: "원";
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--text-able);
+}
+
+.charged_content .content .item .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.charged_content .content .item .right span {
+    text-align: right;
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 500;
+}
+.charged_content .charge.content .item .right span {
+    color: var(--success);
+}
+.charged_content .rent.content .item .right span {
+    color: var(--text-secondary);
+}
+
+.charged_content .content .item .right span.add_mileage,
+.charged_content .content .item .right span.use_coin {
+    color: var(--text-secondary);
+}
+
+.charged_content .content .item .right span.use_mileage,
+.charged_content .disappear.content .item .right span.dis_mileage,
+.charged_content .disappear.content .item .right span.dis_coin,
+.charged_content .disappear.content .item .right span.dis_coin {
+    color: var(--text-primary);
+}
+.charged_content .disappear.content .item .right span.del_coin,
+.charged_content .disappear.content .item .right span.del_mileage {
+    color: #ce1b31;
+}
+
+.charged_content .content .item .right span::before {
+    content: "+";
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.charged_content .content .item .right span.use_coin::before,
+.charged_content .content .item .right span.use_mileage::before,
+.charged_content .disappear.content .item .right span.dis_mileage::before {
+    content: "-";
+    display: inline-block;
+    margin-right: 1px;
+}
+.charged_content .disappear.content .item .right span.dis_coin::before {
+    content: "-";
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.charged_content .content .item .right span.del_coin::before,
+.charged_content .content .item .right span.del_mileage::before {
+    content: "";
+    display: inline-block;
+}
+
+.charged_content .content .item .right span.add_coin::after,
+.charged_content .content .item .right span.use_coin::after,
+.charged_content .content .item .right span.del_coin::after,
+.charged_content .content .item .right span.dis_coin::after {
+    content: "C";
+    display: inline-block;
+    text-transform: uppercase;
+    margin-left: 2px;
+}
+
+.charged_content .content .item .right span.add_mileage::after,
+.charged_content .content .item .right span.use_mileage::after,
+.charged_content .content .item .right span.del_mileage::after,
+.charged_content .content .item .right span.dis_mileage::after {
+    content: "M";
+    display: inline-block;
+    text-transform: uppercase;
+    margin-left: 2px;
+}
+
+.edit > label {
+    display: none;
+}

@@ -1,0 +1,438 @@
+p {
+    display: block;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+button {
+    padding: 0px;
+    border-style: none;
+}
+/* sub global */
+
+header#comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0.5rem;
+    background-color: var(--theme-day-bg);
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+header#comment > a {
+    display: block;
+    text-decoration: none;
+}
+header#comment a svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+header#comment a svg > path {
+    stroke: var(--text-able);
+}
+
+header#comment > p {
+    width: calc(100% - 36px - 1rem);
+    text-align: center;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 140%;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: var(--text-able);
+}
+/* !댓글 헤더 Fin */
+
+#comment_container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#comment_container .comment_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 1rem;
+}
+
+.comment_top .comment_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    width: fit-content;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 140%;
+    letter-spacing: -0.5px;
+    color: var(--text-able);
+    padding: 8.5px 0px;
+}
+
+.comment_top .comment_wrap > span:last-of-type {
+    color: var(--text-primary);
+}
+
+/* !전체 리스트 필터 */
+#comment_filter {
+    width: fit-content;
+    position: relative;
+}
+#comment_filter button#filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    background-color: transparent;
+    color: var(--text-secondary);
+    box-sizing: border-box;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+/*#comment_filter button#filter.active > svg > path {*/
+/* transform: rotate(180deg);*/
+/* transform-origin: 50% 50%;*/
+/*}*/
+
+#comment_filter .filter_list {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 82px;
+    box-sizing: border-box;
+    padding: 1rem 0px;
+    border: 1px solid var(--border-e0);
+    border-radius: 0.5rem;
+    background-color: var(--theme-day-bg);
+    position: absolute;
+    right: 0px;
+    z-index: 1000;
+}
+
+#comment_filter .filter_list.active {
+    display: flex;
+}
+
+#comment_filter .filter_list > button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 36px;
+    background-color: transparent;
+    color: var(--text-secondary);
+    letter-spacing: -0.5px;
+}
+#comment_filter .filter_list > button.active {
+    color: var(--secondary);
+}
+
+/* !댓글 입력창 */
+.write_box {
+    width: calc(100% - 2rem);
+    box-sizing: border-box;
+    background-color: var(--theme-day-bg);
+    border: 1px solid var(--border-e0);
+    margin: 0 auto;
+    padding: 14px 1rem 10px;
+    border-radius: 0.5rem;
+}
+
+.reple_list .write_box {
+    width: 100%;
+}
+
+.write_box textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: fit-content;
+    max-height: 160px;
+    resize: none;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    color: var(--text-able);
+    border-style: none;
+    background-color: var(--theme-day-bg);
+    padding: 0px;
+    outline: none;
+    overflow: visible;
+}
+
+.write_box textarea::placeholder {
+    color: var(--text-primary);
+}
+
+.write_box > span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    gap: 2px;
+    color: var(--text-333);
+}
+.write_box > span > b:last-of-type {
+    color: var(--text-primary);
+}
+
+.write_box > span > b:last-of-type::before {
+    content: "/";
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 2px;
+}
+
+.write_box hr.line {
+    display: block;
+    width: 100%;
+    border-top: 1px solid var(--border-f0);
+    margin: 0.5rem 0px;
+}
+
+.write_box .box_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.write_box .box_bottom > p {
+    color: var(--text-primary);
+    letter-spacing: -0.7px;
+    font-size: 12px;
+}
+.write_box .box_bottom button#submit {
+    box-sizing: border-box;
+    border-style: none;
+    background-color: var(--primary);
+    padding: 6.5px 1rem;
+    border-radius: 6px;
+    min-width: 53px;
+}
+
+/* !댓글 입력창 Fin */
+
+.list_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 2rem;
+}
+
+.list_wrap .item {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 1rem 1rem;
+}
+.list_wrap .item .top_wrap,
+.reple_list .reple_item .reple_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+/* !신고하기 팝업 */
+.list_wrap .item .top_wrap .dot_wrap,
+.reple_list .reple_item .reple_top .dot_wrap {
+    position: relative;
+}
+.list_wrap .item .top_wrap .dot_wrap > .dot_select,
+.reple_list .reple_item .reple_top .dot_wrap > .dot_select {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    box-sizing: border-box;
+    background-color: var(--theme-day-bg);
+    border: 1px solid var(--border-e0);
+    border-radius: 0.5rem;
+    padding: 1rem 0px;
+    width: 84px;
+    position: absolute;
+    right: 0px;
+    /* top: 0px; */
+    z-index: 1000;
+}
+
+.list_wrap .item .top_wrap .dot_wrap > svg.active + .dot_select,
+.reple_list .reple_item .reple_top .dot_wrap > svg.active + .dot_select {
+    display: flex;
+}
+
+.list_wrap .item .top_wrap .dot_wrap > .dot_select > button,
+.reple_list .reple_item .reple_top .dot_wrap > .dot_select > button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 36px;
+    background-color: transparent;
+    color: var(--text-secondary);
+}
+
+.list_wrap .item .top_wrap .dot_wrap > .dot_select > button.active,
+.reple_list .reple_item .reple_top .dot_wrap > .dot_select > button.active {
+    color: var(--secondary);
+}
+/* !신고하기 팝업 Fin*/
+
+.list_wrap .item input[type="checkbox"] {
+    display: none;
+}
+
+.list_wrap .item .top_wrap .left_wrap,
+.reple_list .reple_item .reple_top .left_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    gap: 6px;
+}
+
+.list_wrap .item .top_wrap .left_wrap > p,
+.reple_list .reple_item .reple_top .left_wrap > p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-333);
+}
+
+.list_wrap .item .top_wrap .left_wrap > p > span:last-of-type,
+.reple_list .reple_item .reple_top .left_wrap > span:last-of-type {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.list_wrap .item .comment_text,
+.reple_list .reple_item .comment_text {
+    display: block;
+    text-align: left;
+    margin-bottom: 3px;
+    letter-spacing: -0.5px;
+    color: var(--text-333);
+}
+
+.list_wrap .item .bottom_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid var(--border-f0);
+    padding-bottom: 0.75rem;
+}
+
+.list_wrap .item .bottom_wrap > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+}
+
+.list_wrap .item .bottom_wrap > div > span {
+    color: var(--text-primary);
+    padding-top: 4px;
+}
+
+.list_wrap .item .bottom_wrap > div > svg > path {
+    fill: var(--text-primary);
+}
+
+.list_wrap .item .bottom_wrap > div:first-of-type.active > svg > path,
+.list_wrap .item .bottom_wrap > div:last-of-type.active > svg > path {
+    fill: var(--secondary);
+}
+
+.list_wrap .item .bottom_wrap > div:first-of-type.active > span,
+.list_wrap .item .bottom_wrap > div:last-of-type.active > span {
+    color: var(--secondary);
+}
+/*
+.list_wrap .item .bottom_wrap > label > svg > path {
+}
+.list_wrap .item .bottom_wrap input:checked + label > svg > path,
+.list_wrap .item .bottom_wrap input:checked + label > svg > path {
+}
+
+.list_wrap .item .bottom_wrap input:checked + label > span,
+.list_wrap .item .bottom_wrap input:checked + label > span {
+ color: var(--secondary);
+} */
+
+/* !댓글 리스트 아이템 Fin */
+
+.reple_list {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--border-f0);
+    border-collapse: collapse;
+    margin-top: -2px;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.reple_list.active {
+    display: flex;
+}
+
+.reple_list .reple_item {
+    width: 100%;
+    border-bottom: 1px solid var(--border-f0);
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+/* !대댓글 Fin */
+
+.reple_close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.reple_close button#more_reple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 28px);
+    background-color: transparent;
+    color: var(--text-secondary);
+}
+
+.reple_close button#close_reple {
+    background-color: transparent;
+    min-width: 25px;
+    color: var(--text-333);
+}
+
+button#close_all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem 0px;
+    background-color: transparent;
+    color: var(--text-secondary);
+}

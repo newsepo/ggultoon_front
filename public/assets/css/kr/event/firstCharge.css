@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: transparent;
+}
+
+header#first {
+    width: 100%;
+    background-color: var(--theme-day-bg);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px 0.5rem;
+    gap: 0.25rem;
+    position: fixed;
+    top: 0px;
+    max-width: 570px;
+    z-index: 100;
+}
+
+#toonWrap.hide header#first {
+    max-width: 768px;
+}
+
+header#first > p {
+    width: calc(100% - 50px);
+    text-align: center;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text-able);
+    line-height: 120%;
+    letter-spacing: -0.5px;
+}
+
+#first_container {
+    background: linear-gradient(to bottom, rgba(255, 190, 15, 1) 0%, rgba(255, 227, 100, 1) 100%);
+    padding-top: 56px;
+}
+
+#first_container .title_wrap {
+    width: 100%;
+    padding: 5rem 4rem;
+    background: url("/assets/images/kr/event/firstCharge/top_bg.png") no-repeat 50% 10%;
+    background-size: 95%;
+    padding-bottom: 0px;
+}
+
+#first_container .list_wrap {
+    width: 100%;
+    padding: 0px 2rem;
+    margin-top: -10px;
+}
+
+#first_container .list_wrap > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 3px;
+}
+
+#first_container .list_wrap > ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff8d9;
+    padding: 1.5rem 0px;
+    cursor: pointer;
+}
+#first_container .list_wrap > ul > li:first-of-type {
+    padding-top: 2rem;
+}
+#first_container .list_wrap > ul > li:first-of-type .label {
+    width: 100%;
+    background-color: #ff8400;
+    padding: 5px 1rem;
+    text-align: center;
+    color: #fff;
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    letter-spacing: 0px;
+    margin-bottom: 1.5rem;
+}
+
+#first_container .list_wrap > ul > li del {
+    display: block;
+    margin: 0 auto;
+    font-family: "NanumSquareNeo";
+    font-size: 0.75rem;
+    line-height: 120%;
+    font-weight: 700;
+    text-align: center;
+    color: #888;
+    letter-spacing: 0px;
+    margin-bottom: 0.25rem;
+}
+
+#first_container .list_wrap > ul > li > .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+#first_container .list_wrap > ul > li > .item > span {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: "NanumSquareNeo";
+    line-height: 120%;
+    margin-bottom: 0.5rem;
+}
+
+#first_container .list_wrap > ul > li > .item > span > b,
+#first_container .list_wrap > ul > li > .item > span:nth-of-type(2) {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: "NanumSquareNeo";
+    line-height: 120%;
+    font-weight: 900;
+}
+
+#first_container .list_wrap > ul > li:first-of-type > .item > span:nth-of-type(2) {
+    color: #ffb400;
+}
+#first_container .list_wrap > ul > li:nth-of-type(2) > .item > span:nth-of-type(2) {
+    color: #ff9f0a;
+}
+#first_container .list_wrap > ul > li:nth-of-type(3) > .item > span:nth-of-type(2) {
+    color: #ff9409;
+}
+#first_container .list_wrap > ul > li:last-of-type > .item > span:nth-of-type(2) {
+    color: #ff7800;
+}
+
+#first_container .list_wrap > ul > li .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+#first_container .list_wrap > ul > li .bottom > i {
+    display: block;
+    width: 30px;
+    height: 20px;
+}
+
+#first_container .list_wrap > ul > li:first-of-type .bottom > i {
+    background: url("/assets/images/kr/event/firstCharge/arrow_1.png") no-repeat center top;
+    background-size: 100%;
+}
+#first_container .list_wrap > ul > li:nth-of-type(2) .bottom > i {
+    background: url("/assets/images/kr/event/firstCharge/arrow_2.png") no-repeat center top;
+    background-size: 100%;
+}
+#first_container .list_wrap > ul > li:nth-of-type(3) .bottom > i {
+    background: url("/assets/images/kr/event/firstCharge/arrow_3.png") no-repeat center top;
+    background-size: 100%;
+}
+#first_container .list_wrap > ul > li:last-of-type .bottom > i {
+    background: url("/assets/images/kr/event/firstCharge/arrow_4.png") no-repeat center top;
+    background-size: 100%;
+}
+
+#first_container .list_wrap > ul > li .bottom {
+    padding-right: 25px;
+}
+#first_container .list_wrap > ul > li .bottom > span {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 100%;
+}
+#first_container .list_wrap > ul > li .bottom > span::after {
+    content: "원";
+    display: inline-block;
+    vertical-align: baseline;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-left: 2px;
+}
+
+#first_container .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem 2rem;
+    padding-bottom: 4rem;
+}
+
+#first_container .footer > span {
+    display: block;
+    width: 100%;
+    font-size: 0.85rem;
+    line-height: 120%;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 0.75rem;
+}
+#first_container .footer > p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+#first_container .footer > p > span {
+    font-size: 0.75rem;
+}
+#first_container .footer > p > span:first-of-type {
+    width: 10px;
+    text-align: center;
+}
+#first_container .footer > p > span:last-of-type {
+    width: calc(100% - 10px);
+}
+
+@media screen and (max-width: 570px) {
+    #first_container .title_wrap {
+        padding: 3rem 1.5rem;
+        padding-bottom: 0px;
+        background-size: 100%;
+    }
+    #first_container .list_wrap {
+        padding: 0px 1.5rem;
+    }
+
+    #first_container .list_wrap > ul > li:first-of-type .label {
+        font-size: 1rem;
+    }
+
+    #first_container .list_wrap > ul > li > .item > span,
+    #first_container .list_wrap > ul > li > .item > span > b,
+    #first_container .list_wrap > ul > li > .item > span:nth-of-type(2) {
+        font-size: 1.25rem;
+    }
+
+    #first_container .list_wrap > ul > li .bottom > span {
+        font-size: 0.85rem;
+        line-height: 100%;
+    }
+    #first_container .footer {
+        padding: 2rem 1.5rem;
+    }
+    #first_container .footer > p > span {
+        font-size: 10px;
+    }
+}

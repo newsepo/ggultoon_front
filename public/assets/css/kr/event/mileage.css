@@ -1,0 +1,62 @@
+p,
+span,
+button {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+header#mileage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0.5rem;
+    background-color: var(--theme-day-bg);
+    position: fixed;
+    top: 0px;
+    max-width: 570px;
+    z-index: 1000;
+}
+#toonWrap.hide header#mileage {
+    max-width: 768px;
+}
+
+header#mileage button {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+}
+
+header#mileage .title {
+    display: block;
+    width: calc(100% - 36px - 1rem);
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 120%;
+    text-align: center;
+}
+
+/* header Fin */
+
+#mileage_container {
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding-top: 56px;
+    position: relative;
+}
+
+#mileage_container button {
+    width: 70%;
+    padding-top: 20%;
+    margin: 0 auto;
+    position: absolute;
+    top: 69%;
+    left: 15%;
+    background-color: transparent;
+    /* background-color: red; */
+}

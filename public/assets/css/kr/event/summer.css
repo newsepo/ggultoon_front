@@ -1,0 +1,204 @@
+button {
+    border-style: none;
+    padding: 0px;
+    background-color: transparent;
+}
+p,
+figure {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+header#summer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 570px;
+    gap: 0.25rem;
+    box-sizing: border-box;
+    background-color: var(--theme-day-bg);
+    padding: 12px 0.5rem;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+
+#toonWrap.hide #mainSection header#summer {
+    max-width: 768px;
+}
+header#summer button {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+header#summer svg {
+    stroke: var(--text-able);
+}
+header#summer > p {
+    width: calc(100% - 36px - 1rem);
+    text-align: center;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    line-height: 120%;
+    font-weight: 800;
+    color: var(--text-able);
+}
+/* !header Fin */
+
+#summer_container {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 56px;
+    background-color: #ffcd05;
+}
+
+#summer_container img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+#summer_container .summer_wrap {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    position: relative;
+}
+
+#summer_container .summer_wrap .tab_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+#summer_container .summer_wrap .tab_wrap > span {
+    display: block;
+    width: 100%;
+    padding-top: 17%;
+    overflow: hidden;
+    border-radius: 0.5rem 0.5rem 0px 0px;
+    cursor: pointer;
+}
+
+#summer_container .summer_wrap .tab_wrap > span:first-of-type {
+    background: url("/assets/images/kr/event/newYear/tab_01_off.png") no-repeat center top;
+    background-size: 135%;
+}
+#summer_container .summer_wrap .tab_wrap > span:nth-of-type(2) {
+    background: url("/assets/images/kr/event/newYear/tab_02_off.png") no-repeat center top;
+    background-size: 135%;
+}
+#summer_container .summer_wrap .tab_wrap > span:last-of-type {
+    background: url("/assets/images/kr/event/newYear/tab_03_off.png") no-repeat center top;
+    background-size: 135%;
+}
+
+#summer_container .summer_wrap .tab_wrap > span.active:first-of-type {
+    background: url("/assets/images/kr/event/newYear/tab_01_on.png") no-repeat center top;
+    background-size: 135%;
+}
+#summer_container .summer_wrap .tab_wrap > span.active:nth-of-type(2) {
+    background: url("/assets/images/kr/event/newYear/tab_02_on.png") no-repeat center top;
+    background-size: 135%;
+}
+#summer_container .summer_wrap .tab_wrap > span.active:last-of-type {
+    background: url("/assets/images/kr/event/newYear/tab_03_on.png") no-repeat center top;
+    background-size: 135%;
+}
+
+.tab_container {
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 3rem;
+    margin-top: calc(-80px + 12.8%);
+}
+
+#toonWrap.hide #mainSection #layoutSidenav #summer_container .tab_container {
+    margin-top: calc(-80px + 8.8%);
+}
+
+.tab_container .content {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 1.125rem 1rem;
+}
+
+.tab_container .content.active {
+    display: grid;
+}
+
+.tab_container .content a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    position: relative;
+}
+
+.tab_container .content a.adult-ico::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 100;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url("/assets/images/kr/event/newYear/adult_icon.png")no-repeat left top;
+    background-size: 100%;
+}
+
+.tab_container .content a figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.tab_container .content a figure .img_wrap {
+    width: 100%;
+    aspect-ratio: 0.666667 / 1;
+    overflow: hidden;
+}
+
+.tab_container .content a figure .img_wrap > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+.tab_container .content a:hover figure .img_wrap > img {
+    transform: scale(1.1);
+}
+
+.tab_container .content a figure figcaption {
+    width: 100%;
+}
+.tab_container .content a figure figcaption > p {
+    display: -webkit-box;
+    width: 100%;
+    white-space: normal;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-family: "NanumSquareNeo";
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}

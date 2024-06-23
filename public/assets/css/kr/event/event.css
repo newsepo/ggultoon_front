@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    font-family: 'NanumSquare Neo' , sans-serif;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+p,
+h4,
+h5,
+ul {
+    margin-bottom: 0px;
+    padding: 0px;
+    padding-bottom: 0px;
+}
+
+figure {
+    margin-bottom: 0px;
+}
+button {
+    border-style: none;
+    padding: 0px;
+}
+/* sub global */
+
+/* 이벤트 헤더 */
+header#event {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0.5rem;
+    background-color: var(--theme-day-bg);
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
+header#event > svg > path {
+    stroke: var(--text-able);
+}
+header#event p.myInfo.title {
+    font-family: "NanumSquareNeo";
+    font-weight: 800;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    width: calc(100% - 2rem - 40px);
+}
+/* !이벤트 헤더 Fin */
+
+.lib_container {
+    width: 100%;
+    padding-bottom: 3rem;
+    box-sizing: border-box;
+}
+
+.event-list{
+    padding: 0 1rem;
+}
+.event-list li{
+    position:relative
+}
+.event-list li + li{
+    margin-top: 1.5rem;
+}
+.event-list .label-wrap{
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    width: 100%;
+}
+.event-list img{
+    max-width:100%;
+    border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    -moz-border-radius: 0.625rem;
+    -ms-border-radius: 0.625rem;
+    -o-border-radius: 0.625rem;
+}
+.event-list .label-wrap span{
+    padding: 0.3rem;
+    font-weight: 900;
+    font-size: 0.68rem;
+    color: #000;
+    background: var(--primary);
+    letter-spacing: 0;
+    border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+}
+.event-list .d-day{
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    padding: 0.3rem;
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.15em;
+    background: rgba(51,51,51,0.7);
+    border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+}

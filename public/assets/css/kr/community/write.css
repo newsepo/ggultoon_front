@@ -1,0 +1,135 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+button {
+    background-color: transparent;
+}
+
+header#writePost {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    width: 100%;
+    background-color: var(--theme-day-bg);
+    padding: 12px 0.5rem;
+    position: fixed;
+    top: 0px;
+    max-width: 570px;
+    z-index: 1000;
+}
+
+#toonWrap.hide header#writePost {
+    max-width: 768px;
+}
+
+header#writePost .title {
+    width: calc(100% - 36px - 1rem);
+    text-align: center;
+    font-family: "NanumSquareNeo";
+    font-weight: 800;
+    line-height: 120%;
+    letter-spacing: -0.5px;
+    color: var(--text-able);
+}
+
+/* *글쓰기 페이지 헤더 Fin */
+
+#write_container {
+    width: 100%;
+    padding: 3rem 1rem;
+    padding-top: 56px;
+    min-height: 100vh;
+    padding-bottom: 1rem;
+}
+
+#write_container .top_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#write_container .top_wrap > input[type="text"] {
+    display: block;
+    width: 100%;
+    border-style: none;
+    outline: none;
+    border-bottom: 1px solid var(--border-e0);
+    padding: 14px 4px 1rem;
+    color: var(--text-able);
+}
+
+#write_container .top_wrap > input[type="text"]::placeholder {
+    color: var(--text-primary);
+}
+
+#write_container .top_wrap > input[type="checkbox"] {
+    display: none;
+}
+
+#write_container .top_wrap > label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0px;
+}
+
+#write_container .top_wrap > label > p {
+    color: var(--text-primary);
+}
+
+#write_container .top_wrap > label > svg rect {
+    stroke: var(--border-e0);
+}
+
+#write_container .top_wrap > label > svg path {
+    fill: var(--border-e0);
+}
+
+#write_container .top_wrap > input#chkAdult:checked ~ label[for="chkAdult"] > svg rect {
+    stroke: var(--primary);
+    fill: var(--primary);
+}
+#write_container .top_wrap > input#chkAdult:checked ~ label[for="chkAdult"] > svg path {
+    fill: var(--theme-day-bg);
+}
+
+#write_container .top_wrap > input#chkAdult:checked ~ label[for="chkAdult"] > p {
+    color: var(--text-able);
+}
+
+/* *CK 에디터 커스텀 */
+.ck-editor__editable {
+    min-height: 328px;
+    height: 50vh;
+    margin-bottom: 1rem;
+}
+
+button.btn-submit {
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: var(--primary);
+    color: var(--text-able);
+    position: sticky;
+    top: 90vh;
+    z-index: 1000;
+    padding: 13.5px 1rem;
+    margin: 0 auto;
+    max-width: 540px;
+}
+
+button.btn-submit:disabled,
+button.btn-submit.disable {
+    opacity: 0.4;
+}
+
+#toonWrap.hide button.btn-submit {
+    max-width: 738px;
+}

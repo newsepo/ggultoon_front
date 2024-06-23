@@ -1,0 +1,111 @@
+.inner{
+    width: 100%;
+    max-width: 100%;
+    padding:0 1rem;
+}
+.content-area img{
+    margin-top: 1.5rem;
+}
+.content-area .btn-area{
+    position: relative;
+    padding:1.5rem 3.75rem 1.5rem 0;
+}
+.content-area .btn-area button{
+    font-size: 0.875rem;
+}
+.content-area .btn-area button::before{
+    content:'';
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.content-area .btn-area button + button {
+    margin-left: 0.875rem;
+}
+.content-area .btn-area button:last-of-type{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.content-area .btn-area .like{
+    background-image: url();
+}
+.content-area .btn-area .share{
+    background-image: url();
+}
+.content-area .btn-area .complain{
+    background-image: url();
+}
+
+.coment-wrap{
+    padding: 1.5rem 0;
+    border-top: 1px solid #e0e0e0;
+}
+.coment-wrap .coment-count{
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #222;
+}
+.coment-wrap .coment-count span{
+    color: #999;
+}
+.coment-wrap .write-box{
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+.coment-wrap .write-box textarea{
+    width: 100%;
+    max-height: 10rem;
+    font-size: 0.875rem;
+    border: 0;
+    outline: 0;
+    resize: none;
+}
+.coment-wrap .write-box .text-count{
+    font-size: 0.75rem;
+    color: #999;
+}
+.coment-wrap .write-box .text-count .now{
+    color: #333;
+}
+.coment-wrap .write-box .button-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.3rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+.coment-wrap .write-box .button-area .guide{
+    font-size: 0.75rem;
+    color: #999;
+}
+.coment-wrap .write-box .button-area button[type="submit"]{
+    width: 3.18rem;
+    height: 1.875rem;
+    font-size: 0.75rem;
+    background: #ffe143;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.coment-list li{
+    padding: 1rem 0;
+}
+.coment-list li + li{
+    border-top: 1px solid 
+}

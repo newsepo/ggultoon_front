@@ -1,0 +1,473 @@
+@import url("/assets/fonts/kr/Pretendard.css");
+@import url("/assets/fonts/kr/NanumSquareNeo.css");
+@import url("/assets/fonts/kr/UhBeeSe_hyun.css");
+
+.Title-lg {
+    font-family: "Pretendard";
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 600;
+}
+
+.Title-md {
+    font-family: "Pretendard";
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 600;
+}
+
+.Title-sm {
+    font-family: "Pretendard";
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 600;
+}
+
+.Subtitle-lg {
+    font-family: "Pretendard";
+    font-size: 15px;
+    line-height: 130%;
+    font-weight: 600;
+}
+
+.Subtitle-md {
+    font-family: "Pretendard";
+    font-size: 13px;
+    line-height: 130%;
+    font-weight: 600;
+}
+
+.Text-extra-lg {
+    font-family: "Pretendard";
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 500;
+}
+
+.Text-lg {
+    font-family: "Pretendard";
+    font-size: 15px;
+    line-height: 140%;
+    font-weight: 500;
+}
+
+.Text-md {
+    font-family: "Pretendard";
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 500;
+}
+
+.Text-sm {
+    font-family: "Pretendard";
+    font-size: 13px;
+    line-height: 140%;
+    font-weight: 500;
+}
+
+.Text-xs {
+    font-family: "Pretendard";
+    font-size: 12px;
+    line-height: 140%;
+    font-weight: 500;
+}
+
+.Caption-lg {
+    font-family: "Pretendard";
+    font-size: 12px;
+    line-height: 140%;
+    font-weight: 500;
+}
+
+:root {
+    --primary: #ffe143;
+    --secondary: #ffb904;
+    --warning: #ce1b31;
+    --information: #f0f0f0;
+    --success: #3e7fff;
+    --dark: #333333;
+    --disable: #999;
+
+    --text-primary: #999999;
+    --text-secondary: #666666;
+    --text-able: #222222;
+    --text-333: #333;
+    --text-white: #fff;
+
+    --theme-day-bg: #fff;
+    --footer-bg: #f8f8f8;
+    --charging-bg: #f1f6fe;
+
+    --border-e0: #e0e0e0;
+    --border-f0: #f0f0f0;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+@-o-viewport {
+    width: device-width;
+}
+@-ms-viewport {
+    width: device-width;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    letter-spacing: -0.5px;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100vw;
+}
+
+/* body::-webkit-scrollbar {
+    display: none;
+} */
+
+@media screen and (max-width: 570px) {
+    #mainSection {
+        max-width: 100vw;
+    }
+}
+
+@media screen and (min-width: 1295px) {
+    body > section {
+        width: 100%;
+        max-width: 1180px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #mainSection,
+    #layoutSidenav {
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+    }
+
+    #mainSection {
+        width: 100%;
+        height: 100%;
+        max-width: 570px;
+        min-height: 100vh;
+        position: relative;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    }
+}
+
+#zoom_in_out {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-left: 1rem;
+    border-radius: 999px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 76px;
+    z-index: 100;
+    border-style: none;
+    background-color: var(--theme-day-bg);
+}
+
+@media screen and (min-width: 768px) {
+    #zoom_in_out {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1294px) {
+    #mainSection {
+        width: 570px;
+        min-height: 100vh;
+        height: 100%;
+        margin: 0 auto;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+}
+
+/* autofill 삭제  */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+a,
+button {
+    color: var(--text-able);
+}
+
+figure,
+p,
+h4,
+h5,
+ul {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+button {
+    border-style: none;
+    padding: 0px;
+}
+
+button,
+input,
+label {
+    outline: none;
+}
+
+/* Skeleton UI */
+.skeleton-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 1rem;
+    overflow: hidden;
+    z-index: 100;
+}
+.skeleton-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    max-width: 100%;
+    gap: 10px;
+    background: #fff;
+    z-index: 100;
+}
+.skeleton-box + .skeleton-box {
+    margin-top: 24px;
+}
+.skeleton-box .skeleton-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.skeleton-box .skeleton-list .title-box {
+    width: 100%;
+    max-width: 90%;
+    height: 17px;
+}
+.skeleton-box .skeleton-list .info-box {
+    width: 100%;
+    max-width: 70%;
+    height: 16px;
+}
+.skeleton-box .skeleton-list > * {
+    border-radius: 5px;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load 1s infinite;
+}
+@keyframes load {
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/* skeleton style01 */
+.skeleton-box.style01 .skeleton-list .img-box {
+    width: 104px;
+    height: 156px;
+}
+/* skeleton style02 */
+.skeleton-box.style02 .skeleton-list .img-box {
+    width: 128px;
+    height: 192px;
+}
+/* skeleton style03 */
+.skeleton-box.style03 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+.skeleton-box.style03 .skeleton-list {
+    justify-content: space-between;
+    width: 100%;
+    height: 62px;
+    padding: 5px 0 5px 105px;
+    box-sizing: border-box;
+}
+.skeleton-box.style03 .skeleton-list .img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95px;
+    height: 62px;
+}
+/* skeleton style04 */
+.skeleton-box.style04 {
+    gap: 45px;
+}
+.skeleton-box.style04 + .skeleton-box.style04 {
+    margin-top: 10px;
+}
+.skeleton-box.style04 .skeleton-list {
+    position: relative;
+    width: 288px;
+    height: 115px;
+    padding: 5px 0 5px 130px;
+    box-sizing: border-box;
+}
+.skeleton-box.style04 .skeleton-list .img-box {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 80px;
+    height: 115px;
+}
+.skeleton-box.style04 .skeleton-list .number {
+    position: absolute;
+    width: 13px;
+    height: 20px;
+    top: 50%;
+    left: 0;
+    margin-top: -10px;
+}
+/* skeleton style05 */
+.skeleton-box.style05 .img-box {
+    width: 539px;
+    height: 255px;
+    margin-top: 17px;
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+}
+@media screen and (max-width: 570px) {
+    .skeleton-box .skeleton-list .title-box,
+    .skeleton-box .skeleton-list .info-box {
+        max-width: 100%;
+    }
+    .skeleton-box.style04 {
+        gap: 15px;
+    }
+    .skeleton-box.style04 .skeleton-list {
+        padding-left: 110px;
+    }
+    .skeleton-box.style05{
+        margin-left: -11px;
+    }
+    .skeleton-box.style05 .img-box {
+        width: 97.8vw;
+        height: 48vw;
+        margin-top: 2vw;
+    }
+}
+
+*::-webkit-scrollbar {
+    width: 6px; /* 스크롤바의 너비 */
+    height: 6px; /* 스크롤바의 높이 */
+}
+
+*::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    width: 30%; /* 스크롤바의 길이 */
+    background: #a8a8a8d9; /* 스크롤바의 색상 */
+    border-radius: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    /*background: rgba(33, 122, 244, .02);  /*스크롤바 뒷 배경 색상*/
+    border-radius: 6px;
+}
+
+/* *커스텀 셀렉트 박스 공통 css  */
+
+.filter_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+.filter_wrap > .select_wrap {
+    position: relative;
+}
+
+.filter_wrap > .select_wrap button {
+    color: var(--text-secondary);
+}
+
+.filter_wrap > .select_wrap button > svg {
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+.filter_wrap > .select_wrap button.active > svg {
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
+}
+
+.filter_wrap > .select_wrap .sort_list {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 89px;
+    border-radius: 0.5rem;
+    background-color: var(--theme-day-bg);
+    position: absolute;
+    top: 25px;
+    z-index: 100;
+    padding: 1rem 0px;
+    border: 1px solid var(--border-e0);
+}
+.filter_wrap > .select_wrap > button.active + .sort_list {
+    display: flex;
+}
+
+.filter_wrap > .select_wrap.left .sort_list {
+    left: 0px;
+}
+.filter_wrap > .select_wrap.right .sort_list {
+    right: 0px;
+}
+
+.filter_wrap > .select_wrap .sort_list > button {
+    width: 100%;
+    padding: 0.5rem 0px;
+    color: var(--text-secondary);
+}
+.filter_wrap > .select_wrap .sort_list > button.active,
+.filter_wrap > .select_wrap .sort_list > button:active {
+    color: var(--secondary);
+}

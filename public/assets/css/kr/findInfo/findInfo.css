@@ -1,0 +1,320 @@
+@media screen and (min-width: 1295px) {
+ #mainSection {
+  min-height: 100vh;
+ }
+ #layoutSidenav {
+  min-height: 100vh;
+  height: 100%;
+  margin-top: -56px;
+  padding-top: 56px;
+ }
+}
+
+p {
+ margin-bottom: 0px;
+ padding-bottom: 0px;
+ letter-spacing: -0.5px;
+}
+
+#find_container {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ /* background-color: rgba(000, 000, 000, 0.4); */
+ background-color: transparent;
+ width: 100%;
+ height: 100%;
+ min-height: calc(100vh - 56px);
+ box-sizing: border-box;
+ padding: 1rem;
+}
+
+#find_container hr.line {
+ display: block;
+ width: 100%;
+ border-top: 1px solid var(--border-e0);
+ margin-top: 0px;
+ margin-bottom: 0px;
+ opacity: 1;
+}
+
+#find_container .find_wrap {
+ min-width: 328px;
+ max-width: 500px;
+ margin: 0 auto;
+ background-color: var(--theme-day-bg);
+ border: 1px solid var(--border-e0);
+ border-top: none;
+ border-radius: 10px;
+ overflow: hidden;
+}
+
+#find_container .find_wrap .find_tab {
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ width: 100%;
+ height: 54px;
+ overflow: hidden;
+ border-radius: 10px 10px 0px 0px;
+ background-color: rgba(000, 000, 000, 0.4);
+ position: relative;
+}
+
+#find_container .find_wrap .find_tab > .find_tab_item {
+ position: absolute;
+ width: 52%;
+ height: 54px;
+ border-radius: 10px 10px 0px 0px;
+ box-sizing: border-box;
+ text-align: center;
+ text-decoration: none;
+ line-height: 54px;
+ background-color: #f0f0f0;
+ border: 1px solid var(--border-e0);
+ cursor: pointer;
+}
+
+#find_container .find_wrap .find_tab > .find_tab_item:first-of-type {
+ top: 0px;
+ left: 0px;
+ z-index: 1;
+}
+
+#find_container .find_wrap .find_tab > .find_tab_item:first-of-type.active {
+ border-left: none;
+ border-right: 1px solid var(--border-e0);
+}
+
+#find_container .find_wrap .find_tab > .find_tab_item:last-of-type {
+ top: 0px;
+ right: 0px;
+ z-index: 1;
+}
+
+#find_container .find_wrap .find_tab > .find_tab_item:last-of-type.active {
+ border-right: none;
+ border-left: 1px solid var(--border-e0);
+}
+
+#find_container .find_wrap .find_tab > .find_tab_item.active {
+ border: 1px solid var(--border-e0);
+ background-color: var(--theme-day-bg);
+ border-bottom: none;
+ z-index: 10;
+}
+
+#find_container .find_wrap .content {
+ display: none;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: flex-start;
+ gap: 1.5rem;
+ width: 100%;
+ box-sizing: border-box;
+ padding: 40px 2rem;
+ background-color: var(--theme-day-bg);
+ border-bottom: 1px solid var(--border-e0);
+ margin-top: -1px;
+}
+
+#find_container .find_wrap .content.active {
+ display: flex;
+}
+
+.find_wrap .content.find_id > input#findId {
+ display: none;
+}
+
+.find_wrap .content.find_id label[for="findId"] {
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ gap: 0.5rem;
+ width: 100%;
+}
+
+.find_wrap .content.find_id label[for="findId"] > p span:first-of-type {
+ color: var(--text-333);
+}
+
+.find_wrap .content.find_id label[for="findId"] > p span:last-of-type {
+ color: var(--text-secondary);
+}
+
+.find_wrap .content.find_id > input#findId ~ label[for="findId"] > svg rect {
+ stroke: var(--border-e0);
+}
+
+.find_wrap .content.find_id > input#findId ~ label[for="findId"] > svg path {
+ fill: var(--border-e0);
+}
+
+.find_wrap .content.find_id > input#findId:checked ~ label[for="findId"] > svg rect {
+ stroke: var(--primary);
+ fill: var(--primary);
+}
+
+.find_wrap .content.find_id > input#findId:checked ~ label[for="findId"] > svg path {
+ fill: var(--theme-day-bg);
+}
+
+.find_wrap .content.find_id > p {
+ color: var(--text-secondary);
+}
+
+.find_wrap .content.find_id > p > span {
+ display: flex;
+ justify-content: flex-start;
+ align-items: flex-start;
+ gap: 6px;
+ width: 100%;
+}
+
+.find_wrap .content.find_id > p > span b {
+ display: block;
+ width: 10px;
+ text-align: center;
+}
+
+/* 다음 버튼 */
+#find_container button#next,
+#find_container button#result_pw {
+ display: block;
+ width: 100%;
+ height: 54px;
+ box-sizing: border-box;
+ text-align: center;
+ box-sizing: border-box;
+ padding: 14.5px 1rem;
+ border-radius: 0.5rem;
+ border-style: none;
+ background-color: var(--primary);
+ color: var(--text-able);
+ margin-bottom: 0px;
+}
+
+#find_container button#next:disabled {
+ background-color: var(--border-f0);
+}
+
+#find_container button#result_pw:disabled {
+ opacity: 40%;
+}
+
+.content.find_pw > input#findPw {
+ display: block;
+ width: 100%;
+ box-sizing: border-box;
+ border: 1px solid var(--primary);
+ border-radius: 0.5rem;
+ background-color: var(--theme-day-bg);
+ padding: 14.5px 1rem;
+ color: var(--text-able);
+ outline: none;
+}
+
+.content.find_pw > input#findPw::placeholder {
+ color: #7a7a7a;
+}
+
+/** result */
+.content.id_result > p {
+ color: var(--text-333);
+ margin-bottom: 0;
+}
+
+.content.id_result > figure {
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ gap: 0.25rem;
+ width: 100%;
+ margin: 0;
+}
+
+.content.id_result > figure img {
+ display: block;
+ width: 26px;
+ height: 26px;
+ object-fit: cover;
+}
+
+.content.id_result > figure figcaption {
+ width: calc(100% - 30px);
+}
+
+.content.id_result > figure figcaption p {
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items: center;
+ flex-wrap: wrap;
+ letter-spacing: -0.5px;
+}
+
+.content.id_result > figure figcaption p > span:last-of-type {
+ color: var(--text-secondary);
+}
+
+.content.id_result .btn_wrap {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 0.5rem;
+ width: 100%;
+}
+
+.content.id_result button#find_pw,
+.content.id_result button#go_login,
+.content.pw_result button#changing_pw {
+ display: block;
+ width: 100%;
+ height: 54px;
+ box-sizing: border-box;
+ text-align: center;
+ box-sizing: border-box;
+ padding: 14.5px 1rem;
+ border-radius: 0.5rem;
+ border-style: none;
+ background-color: var(--primary);
+ color: var(--text-able);
+ margin-bottom: 0px;
+}
+
+.content.id_result button#find_pw:disabled,
+.content.id_result button#go_login:disabled,
+.content.pw_result button#changing_pw:disabled {
+ opacity: 40%;
+}
+
+/* 비밀번호 찾기 */
+
+.content.pw_result .change_pw_wrap {
+ width: 100%;
+}
+
+.content.pw_result .change_pw_wrap > input {
+ display: block;
+ width: 100%;
+ box-sizing: border-box;
+ border: 1px solid var(--border-e0);
+ color: var(--text-able);
+ padding: 14.5px 1rem;
+ border-radius: 0.5rem;
+ background-color: var(--theme-day-bg);
+ outline: none;
+}
+
+.content.pw_result .change_pw_wrap > input::placeholder {
+ color: var(--text-primary);
+}
+
+.content.pw_result .change_pw_wrap p {
+ display: block;
+ width: 100%;
+ margin-top: 0.25rem;
+ margin-bottom: 0.5rem;
+ color: var(--text-able);
+}

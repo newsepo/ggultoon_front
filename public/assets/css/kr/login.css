@@ -1,0 +1,369 @@
+/* LOGIN, JOIN */
+
+#login_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(000, 000, 000, 0.4);
+    width: 570px;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+#toonWrap.hide #login_container {
+    width: 768px;
+}
+#login_container .login_wrap {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 328px;
+    max-width: 500px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-e0);
+    border-top: none;
+    background-color: var(--theme-day-bg);
+}
+
+#login_container .login_wrap .login_tab {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 54px;
+    /* overflow: hidden; */
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgba(000, 000, 000, 0.4);
+    position: relative;
+}
+
+#login_container .login_wrap .login_tab > span {
+    position: absolute;
+    width: 52%;
+    height: 54px;
+    border-radius: 10px 10px 0px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    line-height: 54px;
+    background-color: #f0f0f0;
+    border: 1px solid var(--border-e0);
+    cursor: pointer;
+}
+
+#login_container .login_wrap .login_tab > span:first-of-type {
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+#login_container .login_wrap .login_tab > span:last-of-type {
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+}
+
+#login_container .login_wrap .login_tab > span.active {
+    border: 1px solid var(--border-e0);
+    background-color: var(--theme-day-bg);
+    border-bottom: none;
+    z-index: 10;
+}
+#login_container .login_content {
+    overflow-y: scroll;
+}
+#login_container .login_content .content {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 2rem;
+    background-color: var(--theme-day-bg);
+}
+
+#login_container .login_content .content.active {
+    display: flex;
+}
+
+.login_content .content > p:not(.find) {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0px;
+}
+
+.login_content .content > p:not(.find) > span {
+    display: block;
+    width: 100%;
+    color: var(--text-secondary);
+    box-sizing: border-box;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.login_content .content > p:not(.find) > span::before,
+.login_content .content > p:not(.find) > span::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    top: 7px;
+    background-color: var(--border-e0);
+}
+
+.login_content .content > p:not(.find) > span::before {
+    left: 0px;
+}
+
+.login_content .content > p:not(.find) > span::after {
+    right: 0px;
+}
+
+.login_content .content .social_login_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.login_content .content .social_login_wrap > button {
+    width: 54px;
+    height: 54px;
+    border-style: none;
+    border-radius: 999px;
+}
+
+.login_content .content .social_login_wrap > button.kakao {
+    background: url("../../../assets/images/kr/social/kakao.png") no-repeat center center;
+    background-size: 100%;
+}
+
+.login_content .content .social_login_wrap > button.naver {
+    background: url("../../../assets/images/kr/social/naver_btn.png") no-repeat center center;
+    background-size: 100%;
+}
+
+.login_content .content .social_login_wrap > button.google {
+    background: url("../../../assets/images/kr/social/google.png") no-repeat center center;
+    background-size: 100%;
+}
+
+.login_content .content > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+input#login_id {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13.5px 1rem;
+    border: 1px solid var(--border-e0);
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+input#login_id::placeholder,
+input#login_pw::placeholder {
+    color: var(--text-primary);
+}
+
+label[for="login_pw"] {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13.5px 1rem;
+    border: 1px solid var(--border-e0);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+label[for="login_pw"] > svg {
+    display: none;
+}
+
+label[for="login_pw"] > svg.active {
+    display: block;
+}
+
+label[for="login_pw"] input#login_pw {
+    display: block;
+    width: calc(100% - 28px);
+    outline: none;
+    border-style: none;
+}
+
+/* 자동로그인 및 아이디 저장 */
+.auto_save_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.auto_save_wrap input {
+    display: none;
+}
+
+.auto_save_wrap label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.auto_save_wrap label > svg rect,
+.content.join form > label > svg rect {
+    stroke: var(--border-e0);
+}
+
+.auto_save_wrap label > svg path,
+.content.join form > label > svg path {
+    fill: var(--border-e0);
+}
+
+.auto_save_wrap input[type="checkbox"]#auto_login:checked ~ label[for="auto_login"] svg > rect,
+.auto_save_wrap input[type="checkbox"]#save_id:checked ~ label[for="save_id"] svg > rect,
+.content.join form > input[type="checkbox"]#all:checked ~ label[for="all"] svg > rect,
+.content.join form > input[type="checkbox"]#privacy:checked ~ label[for="privacy"] svg > rect,
+.content.join form > input[type="checkbox"]#youth:checked ~ label[for="youth"] svg > rect,
+.content.join form > input[type="checkbox"]#marketing:checked ~ label[for="marketing"] svg > rect {
+    stroke: var(--primary);
+    fill: var(--primary);
+}
+
+.auto_save_wrap input[type="checkbox"]#auto_login:checked ~ label[for="auto_login"] svg > path,
+.auto_save_wrap input[type="checkbox"]#save_id:checked ~ label[for="save_id"] svg > path,
+.content.join form > input[type="checkbox"]#all:checked ~ label[for="all"] svg > path,
+.content.join form > input[type="checkbox"]#privacy:checked ~ label[for="privacy"] svg > path,
+.content.join form > input[type="checkbox"]#youth:checked ~ label[for="youth"] svg > path,
+.content.join form > input[type="checkbox"]#marketing:checked ~ label[for="marketing"] svg > path {
+    fill: var(--theme-day-bg);
+}
+
+.auto_save_wrap label > span {
+    color: var(--text-primary);
+}
+
+.auto_save_wrap input[type="checkbox"]:checked + label > span {
+    color: var(--text-333);
+}
+
+#login,
+#verification_btn,
+#join {
+    display: block;
+    width: 100%;
+    height: 54px;
+    box-sizing: border-box;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 14.5px 1rem;
+    border-radius: 0.5rem;
+    border-style: none;
+    background-color: var(--primary);
+    color: var(--text-able);
+    margin-bottom: 2rem;
+}
+
+#join {
+    margin-bottom: 0rem;
+}
+
+#login:disabled,
+#verification_btn:disabled {
+    background-color: var(--border-f0);
+}
+
+#join:disabled {
+    opacity: 40%;
+}
+
+.login_content .content p.find {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.login_content .content p.find > a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.login_content .content p.find > span {
+    display: block;
+    width: fit-content;
+    color: var(--border-e0);
+}
+
+.content.join .join_content {
+    display: none;
+}
+.content.join .join_content.active {
+    display: block;
+}
+
+/* 회원가입 내 약관동의 */
+.content.join {
+    width: 100%;
+}
+
+.content.join form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.content.join form > input {
+    display: none;
+}
+
+.content.join form > label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: fit-content;
+}
+
+.content.join form > label p {
+    margin-bottom: 0px;
+    letter-spacing: -0.5px;
+}
+
+.content.join form > label p a {
+    display: inline-block;
+    color: var(--text-able);
+    letter-spacing: -0.5px;
+}
+
+.content.join form > label p b {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--success);
+    padding-left: 2px;
+    letter-spacing: -0.5px;
+}

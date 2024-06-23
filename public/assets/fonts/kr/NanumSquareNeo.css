@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "NanumSquareNeo";
+    font-style: light;
+    font-weight: 500;
+    src: url(NanumSquareNeoTTF-aLt.woff) format("woff");
+}
+
+@font-face {
+    font-family: "NanumSquareNeo";
+    font-style: normal;
+    font-weight: 600;
+    src: url(NanumSquareNeoTTF-bRg.woff) format("woff");
+}
+
+@font-face {
+    font-family: "NanumSquareNeo";
+    font-style: bold;
+    font-weight: 700;
+    src: url(NanumSquareNeoTTF-cBd.woff) format("woff");
+}
+
+@font-face {
+    font-family: "NanumSquareNeo";
+    font-style: extrabold;
+    font-weight: 800;
+    src: url(NanumSquareNeoTTF-dEb.woff) format("woff");
+}
+
+@font-face {
+    font-family: "NanumSquareNeo";
+    font-style: black;
+    font-weight: 900;
+    src: url(NanumSquareNeoTTF-eHv.woff) format("woff");
+}

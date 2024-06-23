@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: transparent;
+}
+
+header#reward {
+    width: 100%;
+    background-color: var(--theme-day-bg);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px 0.5rem;
+    gap: 0.25rem;
+    position: fixed;
+    top: 0px;
+    max-width: 570px;
+    z-index: 100;
+}
+
+#toonWrap.hide header#reward {
+    max-width: 768px;
+}
+
+header#reward > p {
+    width: calc(100% - 50px);
+    text-align: center;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text-able);
+    line-height: 120%;
+    letter-spacing: -0.5px;
+}
+
+#reward_container {
+    background-color: #071335;
+    padding-top: 56px;
+}
+
+#reward_container .title_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8rem 4rem 4rem;
+    background: url("/assets/images/kr/event/levelReward/top_bg.png") no-repeat 2.5% 10px;
+    background-size: 95%;
+}
+
+#reward_container .title_wrap > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 630px;
+}
+
+#reward_container > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0px 4rem;
+    gap: 10px;
+}
+
+#reward_container > ul > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    padding-right: 25px;
+    border-radius: 6px;
+    background-color: #fff;
+    position: relative;
+}
+
+#reward_container > ul > li.point::before {
+    content: "최고혜택";
+    position: absolute;
+    top: 0px;
+    box-sizing: border-box;
+    padding: 6px 10px 4px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: #6d9dd9;
+    color: #fff;
+    font-size: 14px;
+    font-family: "NanumSqureNeo";
+    line-height: 100%;
+}
+
+#reward_container > ul > li div > p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+#reward_container > ul > li div > p > span {
+    font-family: "NanumSqureNeo";
+    font-size: 1.35rem;
+    line-height: 120%;
+    font-weight: 700;
+    margin-right: 6px;
+}
+#reward_container > ul > li:last-of-type div > p {
+    padding-top: 15px;
+}
+#reward_container > ul > li:first-of-type div > p > span {
+    color: #061335;
+}
+#reward_container > ul > li:nth-of-type(2) div > p > span {
+    color: #b1690c;
+}
+#reward_container > ul > li:nth-of-type(3) div > p > span {
+    color: #787878;
+}
+#reward_container > ul > li:nth-of-type(4) div > p > span {
+    color: #ffb400;
+}
+#reward_container > ul > li:nth-of-type(5) div > p > span {
+    color: #c73a5e;
+}
+#reward_container > ul > li:last-of-type div > p > span {
+    color: #88b1e3;
+}
+
+#reward_container > ul > li div > p > i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    margin-bottom: 2px;
+    aspect-ratio: 1 / 1;
+}
+
+#reward_container > ul > li:first-of-type div > p > i {
+    background: url("/assets/images/kr/event/levelReward/ico_defult.png") no-repeat center center;
+    background-size: contain;
+}
+#reward_container > ul > li:nth-of-type(2) div > p > i {
+    background: url("/assets/images/kr/event/levelReward/ico_bronze.png") no-repeat center center;
+    background-size: contain;
+}
+
+#reward_container > ul > li:nth-of-type(3) div > p > i {
+    background: url("/assets/images/kr/event/levelReward/ico_silver.png") no-repeat center center;
+    background-size: contain;
+}
+
+#reward_container > ul > li:nth-of-type(4) div > p > i {
+    background: url("/assets/images/kr/event/levelReward/ico_gold.png") no-repeat center center;
+    background-size: contain;
+}
+
+#reward_container > ul > li:nth-of-type(5) div > p > i {
+    background: url("/assets/images/kr/event/levelReward/ico_ruby.png") no-repeat center center;
+    background-size: contain;
+}
+
+#reward_container > ul > li:last-of-type div > p > i {
+    background: url("/assets/images/kr/event/levelReward/ico_dia.png") no-repeat center center;
+    background-size: contain;
+}
+
+#reward_container > ul > li div > span {
+    font-size: 1rem;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: #666;
+}
+
+#reward_container > ul > li > img {
+    display: block;
+    width: 20%;
+    max-width: 70px;
+    aspect-ratio: 1 / 1.2;
+    object-fit: contain;
+}
+
+#reward_container > ul > li:last-of-type > img {
+    width: 30%;
+    max-width: 95px;
+    aspect-ratio: 1 / 1;
+}
+
+#reward_container .coin {
+    width: 100%;
+    overflow: hidden;
+    padding-left: 4rem;
+    position: relative;
+}
+
+#reward_container .coin::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: #061335;
+    position: absolute;
+    bottom: -5px;
+}
+
+#reward_container .coin > img {
+    width: 100%;
+    margin-top: -10px;
+}
+
+#reward_container > .footer {
+    width: 100%;
+    padding: 3.5rem 4rem;
+    color: #fff;
+    background-color: #061335;
+    margin-top: -10px;
+}
+
+#reward_container > .footer > span {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+#reward_container > .footer > p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 0.25rem;
+    opacity: 0.9;
+}
+#reward_container > .footer > p:last-of-type {
+    margin-bottom: 0px;
+}
+#reward_container > .footer > p > span:first-of-type {
+    width: 10px;
+    text-align: center;
+}
+#reward_container > .footer > p > span {
+    font-weight: 300;
+}
+#reward_container > .footer > p > span:last-of-type {
+    width: calc(100% - 10px);
+}
+
+@media screen and (max-width: 570px) {
+    #reward_container .title_wrap {
+        padding: 5rem 1.5rem 3rem;
+    }
+
+    #reward_container > ul {
+        padding: 0px 1.5rem;
+    }
+
+    #reward_container > ul > li div > p > span {
+        font-size: 1.125rem;
+    }
+
+    #reward_container .coin {
+        padding-left: 1.5rem;
+    }
+    #reward_container > .footer {
+        padding: 3rem 1.5rem;
+    }
+}

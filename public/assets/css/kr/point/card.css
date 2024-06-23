@@ -1,0 +1,132 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+button {
+    background-color: transparent;
+}
+
+/* 카드 포인트 헤더 */
+header#card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 570px;
+    box-sizing: border-box;
+    padding: 12px 0.5rem;
+    background-color: var(--theme-day-bg);
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+
+#toonWrap.hide header#card {
+    max-width: 768px;
+}
+
+header#card > button {
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    border-style: none;
+    background-color: var(--theme-day-bg);
+    padding: 0px;
+}
+
+header#card svg > path {
+    stroke: var(--text-able);
+}
+header#card p.title {
+    font-family: "NanumSquareNeo";
+    font-weight: 800;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    width: calc(100% - 2rem - 40px);
+}
+/* !카드 포인트 헤더 Fin */
+
+#card_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 56px 32px 3rem;
+    flex-wrap: wrap;
+}
+
+#card_container > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 45.7%;
+    aspect-ratio: 140 / 120;
+    border-radius: 10px;
+    padding: 0.75rem 0.5rem 0.5rem 0.75rem;
+}
+
+#card_container > li.hyundai {
+    background-color: #000;
+}
+#card_container > li.kb {
+    background-color: #776c61;
+}
+#card_container > li.shinhan {
+    background-color: #2846ff;
+}
+#card_container > li.samsung {
+    background-color: #167bff;
+}
+#card_container > li.bc {
+    background-color: #fa3246;
+}
+#card_container > li.lotte {
+    background-color: #d82926;
+}
+#card_container > li.hana {
+    background-color: #009692;
+}
+#card_container > li.nh {
+    background-color: #0fac52;
+}
+#card_container > li.woori {
+    background-color: #0067ac;
+}
+
+#card_container > li img {
+    display: block;
+    object-fit: contain;
+}
+
+#card_container > li span {
+    display: block;
+    width: 100%;
+    margin-top: 7.7px;
+    margin-bottom: 11px;
+
+    color: #fff;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 120%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#card_container > li .wrap {
+    display: flex;
+    width: 100%;
+    height: 44px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#card_container > li .wrap > img {
+    width: 100%;
+    max-width: 44px;
+}

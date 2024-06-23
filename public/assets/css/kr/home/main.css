@@ -1,0 +1,628 @@
+figure {
+    margin-bottom: 0px;
+}
+
+body {
+    height: 100% !important;
+}
+
+#body_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 40.5px;
+    padding-bottom: 3rem;
+    box-sizing: border-box;
+    padding-top: 56px;
+}
+
+#mainBannerSwiperContainer,
+#subBannerSwiperContainer {
+    position: relative;
+    width: 100%;
+}
+
+#toonWrap.hide #mainSection #layoutSidenav #lib_bottom_container {
+    max-width: 768px !important;
+}
+
+.swiper {
+    margin: 0;
+    padding: 0;
+}
+
+.swiper_library,
+.swiper_new,
+.swiper.bottomBannerSwiper {
+    width: 100%;
+}
+
+.swiper .swiper-notification {
+    display: none;
+}
+
+.swiper_library .swiper-wrapper,
+.swiper_new .swiper-wrapper,
+.swiper.bottomBannerSwiper .swiper-wrapper {
+    width: 100%;
+}
+
+.swiper_library .swiper-wrapper .swiper-slide,
+.swiper_new .swiper-wrapper .swiper-slide {
+    width: auto;
+}
+
+#body_container .container_wrap {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1rem;
+}
+
+h4.title {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center;
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+    padding-right: 1rem;
+}
+
+h4.title > span {
+    display: block;
+    text-align: left;
+    font-family: "NanumSquareNeo" !important;
+    font-size: 1rem !important;
+    font-weight: 800;
+}
+
+h4.title > a {
+    display: block !important;
+    text-align: center;
+    color: #000;
+}
+
+h4.title > a > svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+/* !tab */
+.tab_wrap,
+.library_tab_wrap,
+.new_tab_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-left: 0px !important;
+}
+
+.tab_wrap > li.tab_link,
+.library_tab_wrap > li.library_tab_link,
+.new_tab_wrap > li.new_tab_link {
+    font-family: "NanumSquareNeo" !important;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18.2px;
+    letter-spacing: -0.5px;
+    color: #333;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 6px 7px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+    list-style: none;
+    border: 1px solid transparent;
+}
+
+.tab_wrap > li.tab_link.active,
+.library_tab_wrap > li.library_tab_link.active,
+.new_tab_wrap > li.new_tab_link.active {
+    border-color: #222;
+    background-color: #fff;
+    border-radius: 999px;
+    font-weight: 800;
+    padding: 6px 14px;
+}
+
+/* !tab_container */
+
+.tab_container,
+.library_tab_container {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 205px;
+    overflow: hidden;
+}
+
+.tab_container::-webkit-scrollbar,
+.library_tab_container::-webkit-scrollbar {
+    display: none;
+}
+
+.tab_container.new {
+    min-height: 230px;
+}
+
+.tab_container.ranking {
+    min-height: calc(115px * 3 + (10px * 2));
+}
+
+.tab_container.new > div,
+.tab_container.ranking > div.active {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* min-width: 500px; */
+    gap: 0.5rem;
+}
+.tab_container.ranking > div.active {
+    min-width: 0px;
+}
+
+.tab_content,
+.library_tab_content,
+.new_tab_content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    min-height: 205px;
+}
+
+.tab_content.active,
+.library_tab_content.active,
+.new_tab_content.active {
+    display: block;
+}
+
+.tab_container > div.ranking {
+    min-width: none;
+}
+
+/* .tab_container.ranking .swiper .swiper-wrapper {
+    gap: 20px;
+} */
+.tab_container.ranking .swiper .swiper-wrapper .swiper-slide {
+    width: fit-content;
+    min-width: 280px;
+}
+
+.tab_container > div .items,
+.library_tab_container > div .items {
+    display: block;
+    position: relative;
+    width: 80px;
+}
+
+/*내가보던 꿀작 아이템 내부 이미지 상단 뱃지 */
+.tab_container > div .items .top_badge {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px;
+}
+
+.tab_container > div .items.ranking .top_badge {
+    width: 80px;
+    left: 20px;
+    top: 0px;
+}
+.tab_container > div .items .top_badge .left_top > svg {
+    display: none;
+}
+.tab_container > div .items .top_badge .left_top > svg.active {
+    display: block;
+}
+
+.tab_container figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.tab_container.ranking figure {
+    height: 100%;
+}
+
+.tab_container figure .img_wrap {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 3px 10px 10px 3px;
+    aspect-ratio: 0.666667 / 1;
+    padding: 0px;
+}
+
+.tab_container.ranking figure .img_wrap {
+    width: 80px;
+    height: 115px;
+    aspect-ratio: none;
+}
+
+.tab_container figure .img_wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+.tab_container figure:hover .img_wrap img {
+    transform: scale(1.1);
+}
+
+.tab_container figure figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    color: var(--text-333);
+}
+
+.tab_container.ranking figure figcaption {
+    width: calc(100% - 112px);
+}
+
+.tab_container figure figcaption p {
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.tab_container figure figcaption span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tab_container figure figcaption p span.info_title,
+.tab_container figure figcaption p.top_title span.info_title,
+.tab_container.new figure figcaption p span.info_title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 2px;
+}
+
+.tab_container figure figcaption p span.info_title,
+.tab_container figure figcaption p span.info_title > b,
+.tab_container figure figcaption p span.sub_info > .writer {
+    display: -webkit-box;
+    width: 100%;
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tab_container figure figcaption p span.info_title > b {
+    /* display: inline-block; */
+    font-weight: 600;
+    width: fit-content;
+}
+
+.tab_container figure figcaption span.sub_info {
+    color: var(--text-primary);
+}
+
+.tab_container figure figcaption span.sub_info b {
+    display: inline-block;
+    width: fit-content;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.tab_container figure figcaption span.sub_info b:nth-of-type(2) {
+    box-sizing: border-box;
+}
+
+.tab_container figure figcaption span.sub_info b.writer {
+    word-break: break-all;
+    word-wrap: break-word;
+    width: fit-content;
+}
+
+.tab_container figure figcaption p span.rankin_tag_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 6px;
+    color: var(--text-333);
+    margin-top: 0.5rem;
+}
+
+.tab_container figure figcaption p span.rankin_tag_wrap > b::before {
+    content: "#";
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--text-333);
+}
+
+/* !이어보기 btn */
+
+.btn_continue {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 0.5rem;
+    border-radius: 6px;
+    background-color: var(--theme-day-bg);
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    color: #222;
+}
+
+/* .btn_continue:hover {
+  background-color: #e0e0e0;
+ } */
+
+/* !new_container 내부 items */
+
+.new.container_wrap > div .items {
+    display: block;
+    position: relative;
+    width: 104px;
+}
+
+/* !ranking Items */
+
+.ranking.container_wrap div.tab_content .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    /* display: grid;
+ gap: 10px; */
+}
+.ranking.container_wrap > div .items {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 115px;
+}
+
+.ranking.container_wrap figure {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 12px;
+}
+
+.ranking.container_wrap figure > b {
+    font-size: 1rem;
+    display: block;
+    width: 8px;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    font-family: "NanumSquareNeo";
+    font-weight: 800;
+    color: var(--text-333);
+}
+
+.ranking.container_wrap figure > img {
+    display: block;
+    width: 80px;
+}
+
+.ranking.container_wrap figure figcaption div {
+    width: 100%;
+}
+
+.ranking.container_wrap figure figcaption span.sub_info b:nth-of-type(3) {
+    margin-right: 1.5px;
+}
+
+.ranking.container_wrap figure figcaption p.hashtag {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ranking.container_wrap figure figcaption p.hashtag > span::before {
+    content: "#";
+    display: inline-block;
+    width: fit-content;
+}
+.ranking.container_wrap figure figcaption p.hashtag > span {
+    width: fit-content;
+    gap: 0px;
+}
+
+/* 큐레이션 영역 */
+
+.curation {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    overflow: hidden;
+}
+
+.curation > div {
+    width: 100%;
+}
+
+.curation h4 {
+    display: block;
+    width: 100%;
+    font-family: "NanumSquareNeo";
+    font-size: 1rem;
+    line-height: 120%;
+    letter-spacing: -0.5px;
+    font-weight: 800;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.curation .swiper {
+    margin-bottom: 40px;
+}
+
+.curation .swiper .swiper-notification {
+    display: none;
+}
+.curation .swiper .swiper-wrapper .swiper-slide {
+    width: fit-content;
+}
+
+/* 큐레이션 item*/
+/* .curation_wrap {
+ width: 100%;
+ min-height: 195px;
+}
+
+.curation_wrap .items {
+ display: block;
+ position: relative;
+ width: 100%;
+ max-width: 104px;
+ height: 100%;
+}
+
+.curation_wrap figure {
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ width: 100%;
+ max-width: 104px;
+ gap: 0.5rem;
+}
+
+.curation_wrap figure > .img_wrap {
+ display: block;
+ width: 104px;
+ aspect-ratio: 0.666667 / 1;
+ box-sizing: border-box;
+ border-radius: 3px 10px 10px 3px;
+ overflow: hidden;
+}
+
+.curation_wrap figure > .img_wrap img {
+ display: block;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+.curation_wrap figure figcaption {
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ gap: 0.5rem;
+ width: 100%;
+ color: var(--text-333);
+}
+
+.curation_wrap figure figcaption p {
+ margin-bottom: 0px;
+ width: 100%;
+}
+
+.curation_wrap figure figcaption span {
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ gap: 2px;
+ width: 100%;
+ overflow: hidden;
+}
+
+.curation_wrap figure figcaption p span.info_title,
+.curation_wrap figure figcaption p span.sub_info {
+ display: -webkit-box;
+ width: 100%;
+ white-space: normal;
+ -webkit-line-clamp: 1;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ text-overflow: ellipsis;
+}
+
+.curation_wrap figure figcaption span.sub_info {
+ color: var(--text-primary);
+}
+
+.curation_wrap figure figcaption span.sub_info b {
+ display: inline-block;
+ width: fit-content;
+ font-weight: normal;
+}
+
+.curation_wrap figure figcaption span.sub_info b:nth-of-type(2) {
+ box-sizing: border-box;
+} */
+
+/* 내가 보던 꿀작 - 보고있는 작품이 없을경우 */
+#search_container {
+    width: 100%;
+}
+#search_container .no_result {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    box-sizing: border-box;
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+#search_container .no_result.active {
+    display: flex;
+}
+
+#search_container .no_result > svg {
+    display: block;
+    width: 38px;
+    height: 38px;
+}
+#search_container .no_result > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-secondary);
+    text-align: center;
+}
+#search_container .no_result > p > span {
+    display: inline-block;
+    width: fit-content;
+}

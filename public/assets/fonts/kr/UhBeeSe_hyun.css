@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'UhBeeSe_hyun';
+  font-weight: 800;
+  font-style: normal;
+  src: url(UhBeeSe_hyun.woff) format('woff');
+}

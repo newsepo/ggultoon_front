@@ -1,0 +1,122 @@
+@media screen and (min-width: 1295px) {
+    #mainSection {
+        min-height: 100vh;
+    }
+    #layoutSidenav {
+        min-height: 100vh;
+        height: 100%;
+        margin-top: -56px;
+        padding-top: 56px;
+    }
+}
+
+a {
+    color: var(--text-333);
+    text-decoration: none;
+}
+
+.guest_container {
+    width: 100%;
+    background-color: var(--theme-day-bg);
+    padding: 0.5rem 0rem;
+}
+
+.guest_container .guest_top {
+    width: 100%;
+    background-color: var(--theme-day-bg);
+    box-sizing: border-box;
+    padding: 0px 1rem;
+    padding-bottom: 24px;
+    border-bottom: 5px solid var(--footer-bg);
+}
+
+.guest_container .guest_top > p {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: var(--text-333);
+    margin-bottom: 1rem;
+}
+
+#guest_login {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary);
+    text-align: center;
+    border-style: none;
+}
+
+.guest_container .guest_content {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--theme-day-bg);
+    padding: 24px 1rem;
+    padding-right: 0px;
+}
+
+.guest_container .guest_content .wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.guest_container .guest_content h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 1rem);
+    font-family: "NanumSquareNeo";
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    margin-bottom: 0px;
+}
+
+.guest_container .guest_content h4 > span {
+    font-family: "NanumSquareNeo";
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+}
+
+.guest_container .guest_content .scroll {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-y: scroll;
+    padding-top: 1rem;
+}
+
+.guest_container .guest_content .scroll > a {
+    display: block;
+}
+
+.guest_container .guest_content .scroll > a:last-of-type {
+    margin-right: 1rem;
+}
+
+.guest_container .guest_content .scroll img {
+    display: block;
+    width: 160px;
+    height: 92px;
+    border-radius: 0.5rem;
+    object-fit: contain;
+}
+
+hr.line {
+    display: block;
+    width: calc(100% - 1rem);
+    border-top: 1px solid var(--footer-bg);
+    opacity: 1;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+/* hr.line:last-of-type {
+  display: none;
+} */

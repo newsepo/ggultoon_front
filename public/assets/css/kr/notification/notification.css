@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+p,
+h4,
+h5,
+ul {
+    margin-bottom: 0px;
+    padding: 0px;
+    padding-bottom: 0px;
+}
+
+figure {
+    margin-bottom: 0px;
+}
+button {
+    border-style: none;
+    padding: 0px;
+}
+/* sub global */
+
+/* 알림 헤더 */
+header#notify {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0.5rem;
+    background-color: var(--theme-day-bg);
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+
+header#notify > svg > path {
+    stroke: var(--text-able);
+}
+header#notify p.myInfo.title {
+    font-family: "NanumSquareNeo";
+    font-weight: 800;
+    line-height: 19.2px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    width: calc(100% - 2rem - 40px);
+}
+header#notify .btn-edit{
+    color: var(--text-primary);
+    background: none;
+}
+/* !알림 헤더 Fin */
+
+.lib_container {
+    width: 100%;
+    padding-bottom: 3rem;
+    box-sizing: border-box;
+}
+
+
+/* !편집모드시 보이는 상단 제어박스 */
+.lib_content .edit_top {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.lib_container.edit .lib_content .edit_top {
+    display: flex;
+}
+.lib_content .edit_top label[for="select_all"] {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    gap: 0.25rem;
+}
+
+/* checkbox */
+.lib_content input[type="checkbox"] {
+    display: none;
+}
+.lib_content .input-check > svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.lib_content .input-check > svg > path {
+    stroke: var(--border-e0);   
+}
+.lib_content input:checked ~ .input-check > svg > path {
+    stroke: #ffb904;
+}
+.lib_content .input-check *{
+    cursor: pointer;
+}
+
+
+/* 삭제버튼 */
+.lib_content .edit_top > #delete {
+    display: block;
+    text-align: right;
+    color: var(--warning);
+    background-color: transparent;
+}
+
+/* notify list */
+.notify-list{
+    padding:0 1rem;
+}
+.notify-list li{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.75rem 0;
+    gap: 0.5rem;
+}
+.notify-list .notify-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-style: normal
+}
+.notify-list .notify-time{
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--text-primary);
+    font-weight: 400;
+}
+.notify-list li:hover .notify-txt{
+    font-weight: 700;
+}
+.notify-list li.read > *:not(.notify-check){
+    opacity: 0.4;
+}
+.notify-list .notify-check{
+    display: none;
+    position:absolute;
+    top: 0.75rem;
+    right: 0;
+}
+.lib_container.edit .notify-list .notify-check{
+    display: block;
+}
